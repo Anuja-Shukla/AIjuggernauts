@@ -12,3 +12,9 @@ permalink: /simulations/
   </a>
 {% endfor %}
 </div>
+
+<p style="margin-top: 32px;">
+  <strong>Faculty:</strong> use the
+  <a href="{{ '/tools/simulation-creator.html' | relative_url }}">Simulation Creator</a>
+  to generate a custom role-play prompt for your students.
+</p>

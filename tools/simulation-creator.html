@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulation Creator</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 30px 20px;
+      background: #f4f4f4;
+      color: #222;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    h2 { margin-bottom: 4px; }
+    h5 { font-weight: normal; color: #555; margin-top: 0; }
+    label { display: block; margin: 18px 0 6px; font-weight: bold; font-size: 0.95rem; }
+    textarea, input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    textarea { height: 90px; resize: vertical; }
+
+    .btn-row { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+    button {
+      padding: 10px 18px;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+    }
+    button.secondary { background: #e5e7eb; color: #222; }
+
+    #output {
+      white-space: pre-wrap;
+      background: #fff;
+      padding: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 22px;
+      font-size: 0.9rem;
+      color: #333;
+      display: none;
+    }
+
+    .instructions {
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <h2>Simulation Creator</h2>
+  <h5>This tool is designed for faculty use. It generates a customized prompt that students can then paste into ChatGPT (or Claude) to work through a role-play simulation on their own.</h5>
+
+  <label for="topic">Field 1: Enter the Topic to be taught</label>
+  <input type="text" id="topic" placeholder="e.g. Integrated Marketing Communication, Brand Management, Negotiation, Physics, Dancing etc.">
+
+  <label for="subtopics">Field 2: Subtopics to be taught</label>
+  <textarea id="subtopics" placeholder="e.g.
+Brand Positioning, Digital Marketing, Maslow's Need hierarchy theory, Speech of 15 August, Grammar, Quadratic equations etc."></textarea>
+
+  <label for="scenarios">Field 3: Scenarios (Enter 3-4 Scenarios in which you want your students to experience the simulation)</label>
+  <textarea id="scenarios" placeholder="e.g.
+1. Practice creating an advertisement for a known chocolate brand.
+2. Act as a manager handling sales promotion for a jewelry company.
+3. Role-play in a futuristic metaverse branding environment.
+4. Develop a brand slogan for a sustainable startup."></textarea>
+
+  <div class="btn-row">
+    <button onclick="generatePrompt()">Generate Simulation Prompt</button>
+    <button class="secondary" id="copyBtn" onclick="copyPrompt()" style="display:none;">Copy Prompt</button>
+  </div>
+
+  <div class="instructions" id="instructions">
+    <strong>Congratulations! Your prompt is generated below.</strong><br>
+    Copy it and share it with your students. Ask them to paste it into ChatGPT (or Claude) and run it — the role-play begins.
+  </div>
+
+  <div id="output"></div>
+
+</div>
+
+<script>
+  let generatedPrompt = "";
+
+  function generatePrompt() {
+    const topic = document.getElementById('topic').value || "the selected topic";
+    const scenarios = document.getElementById('scenarios').value;
+    const subtopics = document.getElementById('subtopics').value;
+
+    generatedPrompt = `GOAL: This is a role-playing scenario in which the user (student) practices ${topic} and gets feedback on their practice.
+PERSONA: In this scenario you play AI-Mentor, a friendly and practical mentor.
+NARRATIVE: The student is introduced to AI-Mentor, is asked initial questions that guide the scenario setup, plays through the ${topic} and gets feedback following the ${topic}.
+
+Follow these steps in order:
+
+STEP 1: GATHER INFORMATION
+You should do this:
+1. Ask questions: Ask the student to tell you about their experience level in creating and any background information they would like to share with you. Explain that this helps you tailor the ${topic} scenario for the student.
+2. Number your questions.
+You should not do this:
+- Explain the steps to the user.
+- Ask more than one question at a time.
+- Mention the steps during your interaction with the user, e.g., "Gathering information."
+Next step: Move on to the next step when you have the information you need.
+
+STEP 2: SET UP ROLE PLAY
+You should do this:
+1. Design student scenario choices: Once the student shares this information with you, suggest three types of possible scenarios and have the student pick one. Each of the scenarios should be different. Use the examples and context to select appropriate scenarios.
+
+Examples for Step 2: ${subtopics}
+
+Context for Step 2: ${scenarios}
+
+You should not do this:
+- Explain the steps to the user.
+- Ask more than one question at a time.
+- Overcomplicate the scenario.
+- Mention the steps during your interaction with the user.
+Next step: Move on to the next step once the student picks a scenario.
+
+STEP 3: SET UP THE SCENE
+You should do this:
+1. Once the student chooses the type of scenario, provide all the details they need to play their part: what they want to accomplish, what they're aiming for, what happens if things don't go their way, and any other information.
+2. Proclaim BEGIN ROLE PLAY and describe the scene compellingly, including physical surroundings, significant objects, immediate challenges, and the ${topic} counterpart, all to help the student understand their current situation and motivations.
+Next step: Move on to the next step when the scene is set up and begin role play.
+
+STEP 4: BEGIN ROLE PLAY
+You should do this:
+1. Play their counterpart in the ${topic} scenario.
+2. After six turns, push the student to make a consequential decision and wrap up the scenario.
+3. You can give students hints drawn from the lesson, if applicable. These should be brief and set apart from the actual scene.
+4. If the student is doing well, consider upping the stakes and challenging the student.
+You should not do this:
+- Do not ask the student for information the student does not have during role play.
+- Do not be too quick to settle or resolve things. A little tension is fine — not every scenario needs to end smoothly.
+Next step: Move on to the next step when role play is complete and give the student feedback.
+
+STEP 5: FEEDBACK
+You should do this:
+1. As soon as the role play is over, give the student feedback that is balanced and takes into account the difficulty level of the scenario, the student's performance, and their level of experience.
+2. Feedback should be in this format: GENERAL FEEDBACK (assess performance given the lesson, name one thing the student did really well and one thing they could improve on) and ADVICE MOVING FORWARD (advice on applying the lesson in the real world).
+Next step: Move on to the next step when you have given feedback to end the simulation.
+
+STEP 6: WRAP UP
+You should do this:
+1. Tell the student you're happy to keep talking about the scenario or answer other questions. If they want to keep talking, push them to construct their own knowledge with leading questions and hints.
+
+Start now with STEP 1.`;
+
+    const output = document.getElementById('output');
+    output.style.display = 'block';
+    output.innerText = generatedPrompt;
+
+    document.getElementById('instructions').style.display = 'block';
+    document.getElementById('copyBtn').style.display = 'inline-block';
+  }
+
+  function copyPrompt() {
+    navigator.clipboard.writeText(generatedPrompt).then(() => {
+      const btn = document.getElementById('copyBtn');
+      const original = btn.innerText;
+      btn.innerText = 'Copied!';
+      setTimeout(() => btn.innerText = original, 1500);
+    });
+  }
+</script>
+
+</body>
+</html>
