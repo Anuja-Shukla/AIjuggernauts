@@ -556,3 +556,18 @@ body {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* Mini hero headline */
+.mini-hero { text-align: center; padding: 54px 0 10px; border-top: none; }
+.mini-hero .tag {
+  display: inline-block; color: var(--accent-2); font-size: 0.82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 16px;
+}
+.mini-hero .tag::before { content: "\25CF"; margin-right: 8px; font-size: 0.7em; color: var(--accent); }
+.mini-hero h1 {
+  font-size: 2.4rem; line-height: 1.2; margin: 0;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-3) 50%, var(--accent-2) 100%);
+  background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 6s ease-in-out infinite;
+}
+@media (max-width: 600px) { .mini-hero h1 { font-size: 1.8rem; } }

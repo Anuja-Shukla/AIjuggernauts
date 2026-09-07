@@ -4,6 +4,11 @@ title: Home
 description: "AI-powered experiential learning for students and educators. Practice decisions through simulations, quick cases, and learning games."
 ---
 
+<div class="section mini-hero">
+  <div class="tag">AI Powered Learning</div>
+  <h1>Don't just learn the theory.<br>Experience the decision.</h1>
+</div>
+
 <div class="section">
   <div class="section-label">For Students</div>
   <h2 class="section-title">Stop memorizing. Start practicing.</h2>
@@ -13,6 +18,18 @@ description: "AI-powered experiential learning for students and educators. Pract
     <div class="feature-item"><h4>Decide</h4><p>Make decisions with incomplete information and competing priorities.</p></div>
     <div class="feature-item"><h4>Get Feedback</h4><p>Understand what you did well and what you could improve.</p></div>
     <div class="feature-item"><h4>Build Confidence</h4><p>Practice before applying your knowledge in the real world.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">For Faculty</div>
+  <h2 class="section-title">Stop just teaching. Start creating experiences.</h2>
+  <p class="section-sub">Transform classroom concepts into engaging, practice-based learning experiences. Create realistic scenarios, let students make decisions, assess their responses, and gain insights into how they learn.</p>
+  <div class="feature-grid">
+    <div class="feature-item"><h4>Create</h4><p>Turn concepts, cases, and classroom material into realistic practice scenarios.</p></div>
+    <div class="feature-item"><h4>Engage</h4><p>Give students opportunities to apply knowledge, make decisions, and solve problems&mdash;not just memorize content.</p></div>
+    <div class="feature-item"><h4>Assess</h4><p>Evaluate student responses and identify strengths, gaps, and areas for improvement.</p></div>
+    <div class="feature-item"><h4>Guide</h4><p>Use meaningful feedback and learning insights to help students improve and build practical skills.</p></div>
   </div>
 </div>
 
