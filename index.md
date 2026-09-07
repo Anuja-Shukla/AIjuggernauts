@@ -233,7 +233,7 @@ const outcomes = {
 function showResult(choice) {
   const outcome = outcomes[choice];
   const resultBox = document.getElementById('demo-result');
-  resultBox.innerHTML = outcome.text + '<br><span class="concept-tag">' + outcome.concept + '</span><br><button class="decision-restart" onclick="resetDemo()">Try another choice</button><br><a class="btn-secondary" style="margin-top:14px; display:inline-block;" href="{{ \'/simulations/\' | relative_url }}">Want to experience the full simulation? →</a>';
+  resultBox.innerHTML = outcome.text + '<br><span class="concept-tag">' + outcome.concept + '</span><br><button class="decision-restart" onclick="resetDemo()">Try another choice</button><br><a class="btn-secondary" style="margin-top:14px; display:inline-block;" href="/simulations/">Want to experience the full simulation? &rarr;</a>';
   resultBox.style.display = 'block';
   document.getElementById('demo-choices').style.display = 'none';
 }
