@@ -11,7 +11,7 @@ description: "AI-powered experiential learning for students and educators. Pract
     <p class="sub">Learn by doing. Teach with confidence. Apply AI in the real world.</p>
     <div class="hero-ctas">
       <a class="btn-primary" href="{{ '/simulations/' | relative_url }}">Start Learning</a>
-      <a class="btn-secondary" href="#faculty">For Faculty</a>
+      <a class="btn-secondary" href="{{ '/tools/quick-case-generator.html' | relative_url }}">For Faculty</a>
     </div>
   </div>
   <div class="decision-card">
@@ -103,33 +103,6 @@ description: "AI-powered experiential learning for students and educators. Pract
   <p style="margin-top: 26px;"><a class="btn-secondary" href="{{ '/simulations/' | relative_url }}">Explore Student Experiences →</a></p>
 </div>
 
-<div class="section" id="faculty">
-  <div class="section-label">For Faculty</div>
-  <h2 class="section-title">Turn your syllabus into experiences.</h2>
-  <p class="section-sub">Create engaging learning activities around the concepts you already teach.</p>
-  <div class="cards">
-    <a class="card" href="{{ '/tools/simulation-creator.html' | relative_url }}"><h3>Create Simulations</h3><p>Build realistic role-play scenarios for your students.</p></a>
-    <a class="card" href="{{ '/tools/quick-case-generator.html' | relative_url }}"><h3>Generate Quick Cases</h3><p>Turn theories and current events into classroom-ready cases.</p></a>
-    <div class="card" style="cursor:default;"><span class="badge soon">Coming Soon</span><h3>Create Learning Games</h3><p>Turn concepts into interactive competitions and challenges.</p></div>
-    <div class="card" style="cursor:default;"><span class="badge soon">Coming Soon</span><h3>Analyze Learning</h3><p>Understand which concepts students have mastered and where they need support.</p></div>
-  </div>
-
-  <div class="workflow-vert">
-    <div class="flow-step">Your Topic</div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step">Your Theory</div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step">Your Teaching Objective</div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step">Simulation / Case / Game</div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step">Student Experience</div>
-    <div class="flow-arrow">↓</div>
-    <div class="flow-step">Feedback &amp; Learning Insights</div>
-  </div>
-  <div class="workflow-example">Example: Marketing → 4Ps → MBA → Product Launch Simulation</div>
-</div>
-
 <div class="section center">
   <div class="section-label">Subjects</div>
   <h2 class="section-title">Practice across business disciplines.</h2>
@@ -205,7 +178,7 @@ description: "AI-powered experiential learning for students and educators. Pract
     <p>Explore simulations, create a case, or turn your next lesson into an interactive learning experience.</p>
     <div class="hero-ctas" style="justify-content:center;">
       <a class="btn-primary" href="{{ '/simulations/' | relative_url }}">Start Learning</a>
-      <a class="btn-secondary" href="#faculty">I'm Faculty</a>
+      <a class="btn-secondary" href="{{ '/tools/quick-case-generator.html' | relative_url }}">I'm Faculty</a>
     </div>
   </div>
 </div>

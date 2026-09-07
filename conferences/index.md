@@ -4,11 +4,6 @@ title: Upcoming Conferences
 permalink: /conferences/
 ---
 
-<p style="color: var(--muted); margin-bottom: 8px;">
-  Data pulled from <a href="{{ site.data.conferences.source }}" target="_blank" rel="noopener">conferencealerts.in</a>,
-  refreshed automatically once a day. Last updated: {{ site.data.conferences.updated_at }}.
-</p>
-
 <div class="cards">
 {% for event in site.data.conferences.events %}
   <a class="card" href="{{ event.url }}" target="_blank" rel="noopener">
