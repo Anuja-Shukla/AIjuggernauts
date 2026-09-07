@@ -345,6 +345,37 @@ Before presenting the case, silently check: Is there a clear decision maker? Is 
 Goal: Produce a 5-10 minute quick case that a faculty member can use immediately to trigger a meaningful classroom discussion around the selected business theory. Write the full case and teaching note now — do not ask any clarifying questions.`;
   }
 
+  async function callGemini(model, apiKey, prompt) {
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: { maxOutputTokens: 4000 }
+        })
+      }
+    );
+    const data = await response.json();
+    if (!response.ok) {
+      const message = data && data.error && data.error.message ? data.error.message : `Request failed (${response.status})`;
+      const err = new Error(message);
+      err.status = response.status;
+      throw err;
+    }
+    const candidate = data.candidates && data.candidates[0];
+    const text = candidate && candidate.content && candidate.content.parts
+      ? candidate.content.parts.map(p => p.text || '').join('\n').trim()
+      : '';
+    if (!text) throw new Error('No content returned');
+    return text;
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
   async function generateCase() {
     const btn = document.getElementById('generateBtn');
     const status = document.getElementById('status');
@@ -360,48 +391,44 @@ Goal: Produce a 5-10 minute quick case that a faculty member can use immediately
 
     btn.disabled = true;
     status.className = '';
-    status.innerText = 'Generating your case study — this can take 15-30 seconds...';
     result.style.display = 'none';
     copyBtn.style.display = 'none';
 
-    try {
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${encodeURIComponent(apiKey)}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            contents: [{ parts: [{ text: buildPrompt() }] }],
-            generationConfig: { maxOutputTokens: 4000 }
-          })
+    const prompt = buildPrompt();
+    const primaryModel = 'gemini-3.6-flash';
+    const fallbackModel = 'gemini-3.5-flash-lite';
+    const maxAttempts = 3;
+    let text = null;
+    let lastError = null;
+
+    for (let attempt = 1; attempt <= maxAttempts && !text; attempt++) {
+      const model = attempt < maxAttempts ? primaryModel : fallbackModel;
+      status.innerText = attempt === 1
+        ? 'Generating your case study — this can take 15-30 seconds...'
+        : `Google's servers are busy — retrying (attempt ${attempt} of ${maxAttempts})...`;
+      try {
+        text = await callGemini(model, apiKey, prompt);
+      } catch (err) {
+        lastError = err;
+        const overloaded = err.status === 503 || /overloaded|high demand|unavailable/i.test(err.message);
+        if (overloaded && attempt < maxAttempts) {
+          await sleep(2000 * attempt);
+          continue;
         }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        const message = data && data.error && data.error.message ? data.error.message : `Request failed (${response.status})`;
-        throw new Error(message);
+        break;
       }
+    }
 
-      const candidate = data.candidates && data.candidates[0];
-      const text = candidate && candidate.content && candidate.content.parts
-        ? candidate.content.parts.map(p => p.text || '').join('\n').trim()
-        : '';
-
-      if (!text) {
-        throw new Error('No content returned');
-      }
-
+    if (text) {
       generatedText = text;
       result.innerText = text;
       result.style.display = 'block';
       copyBtn.style.display = 'inline-block';
       status.innerText = 'Done.';
-    } catch (err) {
+    } else {
       status.className = 'error';
-      status.innerText = 'Error: ' + err.message + ' — check that your API key is correct, or you may have hit the free tier\'s daily limit.';
-      console.error(err);
+      status.innerText = 'Error: ' + (lastError ? lastError.message : 'Unknown error') + ' — Google\'s free tier can get busy at peak times. Please wait a minute and try again.';
+      console.error(lastError);
     }
 
     btn.disabled = false;
