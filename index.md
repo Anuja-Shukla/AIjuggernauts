@@ -14,7 +14,6 @@ description: "AI-powered experiential learning for students and educators. Pract
     <div class="feature-item"><h4>Get Feedback</h4><p>Understand what you did well and what you could improve.</p></div>
     <div class="feature-item"><h4>Build Confidence</h4><p>Practice before applying your knowledge in the real world.</p></div>
   </div>
-  <p style="margin-top: 26px;"><a class="btn-secondary" href="{{ '/simulations/' | relative_url }}">Explore Student Experiences &rarr;</a></p>
 </div>
 
 <div class="section center">
@@ -30,18 +29,4 @@ description: "AI-powered experiential learning for students and educators. Pract
     <div class="subject-card"><h4>AI &amp; Digital</h4><p>AI Strategy &middot; Digital Transformation &middot; AI Adoption &middot; AI Ethics</p></div>
     <div class="subject-card"><h4>Product &amp; Innovation</h4><p>Product Strategy &middot; Product-Market Fit &middot; Innovation &middot; Pricing</p></div>
   </div>
-</div>
-
-<div class="section">
-  <div class="section-label">Resources</div>
-  <h2 class="section-title">AI that matters for business and education.</h2>
-  <p class="section-sub">Curated AI developments, tools, research, and ideas that matter to educators, students, and business professionals.</p>
-  <p><a class="btn-secondary" href="{{ '/newsletter/' | relative_url }}">Explore AI Newsletter &rarr;</a></p>
-</div>
-
-<div class="section">
-  <div class="section-label">Where Ideas Meet People</div>
-  <h2 class="section-title">Upcoming conferences.</h2>
-  <p class="section-sub">Discover upcoming academic and professional conferences in AI, business, management, education, and technology.</p>
-  <p><a class="btn-secondary" href="{{ '/conferences/' | relative_url }}">View Conferences &rarr;</a></p>
 </div>
