@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-09-08 (seed data — replaced by first automated run)",
+  "source": "https://www.conferencealerts.in/all-upcoming-conferences",
+  "events": [
+    {
+      "id": "2418289",
+      "title": "International Conference on Artificial Intelligence and Machine Learning (ICAIML)",
+      "date": "08 Sep 2026",
+      "location": "Cartago, Costa Rica — ASERP",
+      "url": "https://www.conferencealerts.in/eventdetail/2418289"
+    },
+    {
+      "id": "2418290",
+      "title": "International Conference on Climate Change, Sustainability and Environmental Science (ICCCSES)",
+      "date": "08 Sep 2026",
+      "location": "Cartago, Costa Rica — ASERP",
+      "url": "https://www.conferencealerts.in/eventdetail/2418290"
+    },
+    {
+      "id": "2418291",
+      "title": "International Conference on Cybersecurity and Cloud Computing (ICCCC)",
+      "date": "08 Sep 2026",
+      "location": "Cartago, Costa Rica — ASERP",
+      "url": "https://www.conferencealerts.in/eventdetail/2418291"
+    },
+    {
+      "id": "2400339",
+      "title": "12th International Rubber Glove Conference 2026",
+      "date": "08 Sep 2026",
+      "location": "Kuala Lumpur, Malaysia — irgce",
+      "url": "https://www.conferencealerts.in/eventdetail/2400339"
+    },
+    {
+      "id": "2400280",
+      "title": "The Eighth Edition of the Cultural Sustainable Tourism",
+      "date": "08 Sep 2026",
+      "location": "Turin, Italy — ierek",
+      "url": "https://www.conferencealerts.in/eventdetail/2400280"
+    }
+  ]
+}

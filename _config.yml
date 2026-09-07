@@ -8,41 +8,38 @@ markdown: kramdown
 permalink: /:categories/:title/
 
 collections:
-  case_studies:
-    output: true
-    permalink: /case-studies/:path/
   simulations:
     output: true
     permalink: /simulations/:path/
+  newsletter:
+    output: true
+    permalink: /newsletter/:path/
 
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "case_studies"
-    values:
-      layout: "article"
   - scope:
       path: ""
       type: "simulations"
     values:
       layout: "page"
+  - scope:
+      path: ""
+      type: "newsletter"
+    values:
+      layout: "article"
 
 nav:
   - title: Home
     url: /
-  - title: Articles
-    url: /articles/
-  - title: Case Studies
-    url: /case-studies/
-  - title: Simulations
+  - title: Simulation Generator
     url: /simulations/
-  - title: About
-    url: /about/
+  - title: Quick Case Generator
+    url: /tools/quick-case-generator.html
+  - title: Upcoming Conferences
+    url: /conferences/
+  - title: AI Newsletter
+    url: /newsletter/
+  - title: Contact Us
+    url: /contact/
 
 exclude:
   - README.md
