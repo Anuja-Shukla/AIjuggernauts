@@ -31,7 +31,7 @@ nav:
   - title: Home
     url: /
   - title: Simulation Generator
-    url: /simulations/
+    url: /tools/simulation-creator.html
   - title: Quick Case Generator
     url: /tools/quick-case-generator.html
   - title: Upcoming Conferences
