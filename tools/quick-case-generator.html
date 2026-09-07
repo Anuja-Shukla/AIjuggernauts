@@ -96,6 +96,18 @@
     #status { font-size: 0.9rem; color: var(--muted); }
     #status.error { color: var(--accent-3); }
 
+    .intro-section { margin-bottom: 36px; padding-bottom: 30px; border-bottom: 1px solid var(--border); }
+    .section-label {
+      text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem;
+      color: var(--accent); font-weight: 700; margin-bottom: 10px;
+    }
+    .flow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .flow-step {
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 9px 14px; font-size: 0.82rem; font-weight: 600; color: var(--accent-2);
+    }
+    .flow-arrow { color: var(--muted); font-size: 1rem; }
+
     #result {
       white-space: pre-wrap;
       background: var(--panel);
@@ -145,6 +157,18 @@
 </header>
 
 <div class="wrap content">
+
+  <div class="intro-section">
+    <div class="section-label">Quick Case Generator</div>
+    <h1 style="font-size: 1.5rem; margin: 0 0 6px;">From today's news to tomorrow's classroom.</h1>
+    <div class="flow">
+      <span class="flow-step">Current News</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">Select Theory</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">AIjuggernauts</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">Quick Case</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">Classroom Discussion</span>
+    </div>
+  </div>
 
   <h2>Quick Case Generator</h2>
   <h5>Built for faculty use. Fill in your teaching requirements below and the AI will generate a full Harvard-style, classroom-ready case study plus a separate faculty teaching note, right here on this page.</h5>
