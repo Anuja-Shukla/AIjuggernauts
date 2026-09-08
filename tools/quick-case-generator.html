@@ -176,8 +176,9 @@
     <div class="flow">
       <span class="flow-step">Current News</span><span class="flow-arrow">&rarr;</span>
       <span class="flow-step">Select Theory</span><span class="flow-arrow">&rarr;</span>
-      <span class="flow-step">AIjuggernauts</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">AI Analysis</span><span class="flow-arrow">&rarr;</span>
       <span class="flow-step">Quick Case</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">Discussion Questions</span><span class="flow-arrow">&rarr;</span>
       <span class="flow-step">Classroom Discussion</span>
     </div>
   </div>
@@ -299,7 +300,11 @@ If any optional field above was not provided, make reasonable assumptions based 
 
 YOUR TASK
 
+Create a classroom-ready business case from current news, a real-world event, or the selected topic. Identify the relevant business situation, connect it clearly with the selected management theory/concept, generate a realistic case narrative with key facts and decision points, and provide discussion questions that push students to apply the theory, analyze alternatives, and make a recommendation.
+
 Generate a Harvard Business School-style teaching case, but do not copy Harvard cases or reproduce copyrighted case content.
+
+IMPORTANT LENGTH CONSTRAINT: Keep the entire response (case + teaching note) complete and self-contained within roughly 1400-1800 words total. Write concisely rather than exhaustively — a shorter, complete case is far more useful than a longer one that gets cut off. Do not pad sections; prioritize the decision, the facts needed to reason about it, and the discussion questions.
 
 The case should be:
 - Decision-oriented
@@ -393,7 +398,7 @@ Goal: Produce a 5-10 minute quick case that a faculty member can use immediately
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { maxOutputTokens: 4000 }
+          generationConfig: { maxOutputTokens: 8192 }
         })
       }
     );
