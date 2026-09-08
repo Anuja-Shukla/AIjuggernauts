@@ -1,76 +1,146 @@
 {
-  "updated_at": "2026-09-09",
+  "updated_at": "2026-09-08 07:31 UTC",
   "source": "https://www.conferencealerts.in/all-upcoming-conferences",
   "events": [
     {
-      "id": "2418289",
+      "id": "2418337",
       "title": "International Conference on Artificial Intelligence and Machine Learning (ICAIML)",
-      "date": "08 Sep 2026",
-      "location": "Cartago, Costa Rica \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418289"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418337"
     },
     {
-      "id": "2418298",
+      "id": "2418338",
       "title": "International Conference on Climate Change, Sustainability and Environmental Science (ICCCSES)",
-      "date": "08 Sep 2026",
-      "location": "Golfito, Costa Rica \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418298"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418338"
     },
     {
-      "id": "2418307",
+      "id": "2418339",
       "title": "International Conference on Cybersecurity and Cloud Computing (ICCCC)",
-      "date": "08 Sep 2026",
-      "location": "Puerto Jimenez, Costa Rica \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418307"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418339"
     },
     {
-      "id": "2418316",
+      "id": "2418340",
       "title": "International Conference on Education, Language and Teaching (ICELT)",
-      "date": "08 Sep 2026",
-      "location": "San Jose, Costa Rica \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418316"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418340"
     },
     {
-      "id": "2418325",
+      "id": "2418341",
       "title": "International Conference on Mental Health and Wellness (ICMHW)",
-      "date": "08 Sep 2026",
-      "location": "Zarcero, Costa Rica \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418325"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418341"
     },
     {
-      "id": "2418334",
+      "id": "2418342",
       "title": "World Youth Leadership Conference (WYLC)",
-      "date": "08 Sep 2026",
-      "location": "Bangkok, Thailand \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418334"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418342"
     },
     {
-      "id": "2418295",
+      "id": "2418343",
       "title": "International Conference on Gender and Sexuality (ICGS)",
-      "date": "08 Sep 2026",
-      "location": "Cartago, Costa Rica \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418295"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418343"
     },
     {
-      "id": "2418304",
+      "id": "2418344",
       "title": "International Symposium on the Autonomic Nervous System and Healthcare (ISANSH)",
-      "date": "08 Sep 2026",
-      "location": "Golfito, Costa Rica \u2014 ASERP",
-      "url": "https://www.conferencealerts.in/eventdetail/2418304"
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418344"
     },
     {
-      "id": "2400339",
-      "title": "12th International Rubber Glove Conference 2026",
-      "date": "08 Sep 2026",
-      "location": "Kuala Lumpur, Malaysia \u2014 irgce",
-      "url": "https://www.conferencealerts.in/eventdetail/2400339"
+      "id": "2418345",
+      "title": "International Conference on Artificial Intelligence and Machine Learning (ICAIML)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418345"
     },
     {
-      "id": "2400280",
-      "title": "The Eighth Edition of the Cultural Sustainable Tourism",
-      "date": "08 Sep 2026",
-      "location": "Turin, Italy \u2014 ierek",
-      "url": "https://www.conferencealerts.in/eventdetail/2400280"
+      "id": "2418346",
+      "title": "International Conference on Climate Change, Sustainability and Environmental Science (ICCCSES)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418346"
+    },
+    {
+      "id": "2418347",
+      "title": "International Conference on Cybersecurity and Cloud Computing (ICCCC)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418347"
+    },
+    {
+      "id": "2418348",
+      "title": "International Conference on Education, Language and Teaching (ICELT)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418348"
+    },
+    {
+      "id": "2418349",
+      "title": "International Conference on Mental Health and Wellness (ICMHW)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418349"
+    },
+    {
+      "id": "2418350",
+      "title": "World Youth Leadership Conference (WYLC)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418350"
+    },
+    {
+      "id": "2418351",
+      "title": "International Conference on Gender and Sexuality (ICGS)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418351"
+    },
+    {
+      "id": "2418352",
+      "title": "International Symposium on the Autonomic Nervous System and Healthcare (ISANSH)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418352"
+    },
+    {
+      "id": "2418353",
+      "title": "International Conference on Artificial Intelligence and Machine Learning (ICAIML)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418353"
+    },
+    {
+      "id": "2418354",
+      "title": "International Conference on Climate Change, Sustainability and Environmental Science (ICCCSES)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418354"
+    },
+    {
+      "id": "2418355",
+      "title": "International Conference on Cybersecurity and Cloud Computing (ICCCC)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418355"
+    },
+    {
+      "id": "2418356",
+      "title": "International Conference on Education, Language and Teaching (ICELT)",
+      "date": "",
+      "location": "",
+      "url": "https://www.conferencealerts.in/eventdetail/2418356"
     }
   ]
 }
