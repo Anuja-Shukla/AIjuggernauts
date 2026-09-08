@@ -51,37 +51,79 @@
   </footer>
 
   <div id="reg-gate-overlay" class="reg-gate-overlay">
-    <div class="reg-gate-box">
-      <svg class="logo-mark" style="width:44px;height:44px;margin-bottom:14px;" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="24" cy="24" r="23" fill="url(#haloGradGate)"/>
-        <path d="M12 30 Q12 12 24 12 Q36 12 36 30 Q36 37 24 37 Q12 37 12 30 Z" fill="#1b2140"/>
-        <circle cx="17.5" cy="24" r="6" fill="#fdfcf7"/>
-        <circle cx="30.5" cy="24" r="6" fill="#fdfcf7"/>
-        <circle cx="17.5" cy="24" r="2.6" fill="#161a2e"/>
-        <circle cx="30.5" cy="24" r="2.6" fill="#161a2e"/>
-        <path d="M17 32 Q24 37 31 32" stroke="#fdfcf7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <path d="M15 13 Q24 6 33 13" stroke="#f6c453" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <defs>
-          <radialGradient id="haloGradGate" cx="50%" cy="45%" r="60%">
-            <stop offset="0%" stop-color="#ffe3a3"/>
-            <stop offset="100%" stop-color="#f5a623"/>
-          </radialGradient>
-        </defs>
-      </svg>
-      <h2>Welcome to AIjuggernauts</h2>
-      <p>Quick registration before you dive in — takes 10 seconds.</p>
-      <form id="reg-gate-form">
-        <label for="reg-name">Name</label>
-        <input type="text" id="reg-name" required>
-        <label for="reg-email">Email</label>
-        <input type="email" id="reg-email" required>
-        <button type="submit">Get Started</button>
-        <p id="reg-gate-status" class="reg-gate-status"></p>
-      </form>
+    <div class="reg-gate-box" id="reg-gate-box">
+
+      <div id="gate-step-pitch">
+        <div class="gami-tag">Why AIjuggernauts Works</div>
+        <h2>Gamification makes learning stick.</h2>
+        <p class="gami-sub">Students who practice through game-like decisions retain more, engage longer, and actually enjoy the process.</p>
+
+        <div class="gami-visuals">
+          <div class="gami-visual">
+            <div class="xp-burst-wrap">
+              <span class="xp-burst">+50 XP</span>
+              <span class="xp-burst delay1">+30 XP</span>
+              <span class="xp-burst delay2">+80 XP</span>
+            </div>
+            <div class="gami-caption">Instant feedback keeps students engaged</div>
+          </div>
+          <div class="gami-visual">
+            <div class="progress-demo">
+              <div class="progress-track"><div class="progress-fill"></div></div>
+            </div>
+            <div class="gami-caption">Visible progress builds momentum</div>
+          </div>
+          <div class="gami-visual">
+            <div class="badge-demo">
+              <span class="badge-pop">&#127942;</span>
+            </div>
+            <div class="gami-caption">Milestones turn effort into achievement</div>
+          </div>
+        </div>
+
+        <button type="button" class="gate-continue-btn" onclick="showRegStep()">Continue</button>
+      </div>
+
+      <div id="gate-step-register" style="display:none;">
+        <svg class="logo-mark" style="width:44px;height:44px;margin-bottom:14px;" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" fill="url(#haloGradGate)"/>
+          <path d="M12 30 Q12 12 24 12 Q36 12 36 30 Q36 37 24 37 Q12 37 12 30 Z" fill="#1b2140"/>
+          <circle cx="17.5" cy="24" r="6" fill="#fdfcf7"/>
+          <circle cx="30.5" cy="24" r="6" fill="#fdfcf7"/>
+          <circle cx="17.5" cy="24" r="2.6" fill="#161a2e"/>
+          <circle cx="30.5" cy="24" r="2.6" fill="#161a2e"/>
+          <path d="M17 32 Q24 37 31 32" stroke="#fdfcf7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M15 13 Q24 6 33 13" stroke="#f6c453" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <defs>
+            <radialGradient id="haloGradGate" cx="50%" cy="45%" r="60%">
+              <stop offset="0%" stop-color="#ffe3a3"/>
+              <stop offset="100%" stop-color="#f5a623"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <h2>Welcome to AIjuggernauts</h2>
+        <p>Quick registration before you dive in — takes 15 seconds.</p>
+        <form id="reg-gate-form">
+          <label for="reg-name">Name</label>
+          <input type="text" id="reg-name" required>
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" required>
+          <label for="reg-mobile">Mobile Number</label>
+          <input type="tel" id="reg-mobile" required pattern="[0-9+\-\s]{7,15}" placeholder="+91 98765 43210">
+          <button type="submit">Get Started</button>
+          <p id="reg-gate-status" class="reg-gate-status"></p>
+        </form>
+      </div>
+
     </div>
   </div>
 
   <script>
+  function showRegStep() {
+    document.getElementById('gate-step-pitch').style.display = 'none';
+    document.getElementById('gate-step-register').style.display = 'block';
+  }
+
   (function() {
     var STORAGE_KEY = "aijuggernauts_registered";
     var overlay = document.getElementById('reg-gate-overlay');
@@ -96,6 +138,7 @@
       e.preventDefault();
       var name = document.getElementById('reg-name').value.trim();
       var email = document.getElementById('reg-email').value.trim();
+      var mobile = document.getElementById('reg-mobile').value.trim();
       var status = document.getElementById('reg-gate-status');
       var button = e.target.querySelector('button');
 
@@ -108,11 +151,12 @@
         body: JSON.stringify({
           name: name,
           email: email,
+          mobile: mobile,
           _subject: 'New AIjuggernauts registration'
         })
       })
         .then(function() {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify({ name: name, email: email, date: new Date().toISOString() }));
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({ name: name, email: email, mobile: mobile, date: new Date().toISOString() }));
           overlay.style.display = 'none';
           document.body.style.overflow = '';
         })
