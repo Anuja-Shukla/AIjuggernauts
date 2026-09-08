@@ -47,6 +47,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>&copy; {{ 'now' | date: "%Y" }} AIjuggernauts. AI tools and training for practical learners.</p>
+      <p id="live-user-count" class="live-count" style="display:none;"></p>
     </div>
   </footer>
 
@@ -57,6 +58,7 @@
         <div class="gami-tag">Why AIjuggernauts Works</div>
         <h2>Gamification makes learning stick.</h2>
         <p class="gami-sub">Students who practice through game-like decisions retain more, engage longer, and actually enjoy the process.</p>
+        <p id="gate-user-count" class="gate-count" style="display:none;"></p>
 
         <div class="gami-visuals">
           <div class="gami-visual">
@@ -159,12 +161,34 @@
           localStorage.setItem(STORAGE_KEY, JSON.stringify({ name: name, email: email, mobile: mobile, date: new Date().toISOString() }));
           overlay.style.display = 'none';
           document.body.style.overflow = '';
+          fetch('https://countapi.mileshilliard.com/api/v1/hit/aijuggernauts_registrations_v1').catch(function(){});
         })
         .catch(function() {
           status.textContent = 'Something went wrong — please try again.';
           button.disabled = false;
         });
     });
+  })();
+
+  // Live registration counter — footer badge (all pages) + gate pitch line (unregistered visitors)
+  (function() {
+    fetch('https://countapi.mileshilliard.com/api/v1/get/aijuggernauts_registrations_v1')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var count = (data && typeof data.value === 'number') ? data.value : null;
+        if (count === null) return;
+        var footerEl = document.getElementById('live-user-count');
+        if (footerEl) {
+          footerEl.textContent = '🎓 ' + count.toLocaleString() + '+ learners have joined AIjuggernauts';
+          footerEl.style.display = 'block';
+        }
+        var gateEl = document.getElementById('gate-user-count');
+        if (gateEl) {
+          gateEl.textContent = 'Join ' + count.toLocaleString() + '+ educators and students already here.';
+          gateEl.style.display = 'block';
+        }
+      })
+      .catch(function() {});
   })();
   </script>
 </body>

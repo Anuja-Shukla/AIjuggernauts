@@ -638,3 +638,17 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .xp-burst, .progress-fill, .badge-pop { animation: none !important; }
 }
+
+.live-count {
+  margin-top: 6px !important;
+  font-size: 0.8rem;
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.gate-count {
+  font-size: 0.85rem !important;
+  color: var(--accent-2);
+  font-weight: 600;
+  margin: -6px 0 18px !important;
+}
