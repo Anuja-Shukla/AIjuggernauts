@@ -1,18 +1,106 @@
 {
-  "updated_at": "2026-09-09",
+  "updated_at": "2026-09-09 08:20 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
-    {"title": "MG Ship adds AI route optimisation as logistics returns accelerate", "date": "September 7, 2026", "url": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/"},
-    {"title": "M&T Bank expands enterprise AI after years of technology overhaul", "date": "September 4, 2026", "url": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/"},
-    {"title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation", "date": "September 3, 2026", "url": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/"},
-    {"title": "NVIDIA to acquire Hugging Face for $12.93B", "date": "September 3, 2026", "url": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/"},
-    {"title": "Motional and MIT AI explains self-driving car decisions", "date": "September 2, 2026", "url": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/"},
-    {"title": "ChatGPT Ads passes $1B run rate in 200 days", "date": "September 1, 2026", "url": "https://www.artificialintelligence-news.com/news/chatgpt-ads-passes-1b-run-rate-in-200-days/"},
-    {"title": "A quarter of Nvidia's business next year comes from labs it is financing", "date": "August 27, 2026", "url": "https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs/"},
-    {"title": "Gatik raises $200M to scale AI-powered autonomous freight", "date": "August 26, 2026", "url": "https://www.artificialintelligence-news.com/news/gatik-200m-ai-autonomous-freight/"},
-    {"title": "NVIDIA Jetson Orin Nano 2 brings physical AI to drones and robots", "date": "August 26, 2026", "url": "https://www.artificialintelligence-news.com/news/nvidia-jetson-orin-nano-2-physical-ai-to-drones-and-robots/"},
-    {"title": "MIT AI forecasts extreme weather without historical data", "date": "August 25, 2026", "url": "https://www.artificialintelligence-news.com/news/mit-ai-forecasts-extreme-weather-without-historical-data/"},
-    {"title": "XPENG IRON humanoid robot draws record physical AI funding", "date": "August 24, 2026", "url": "https://www.artificialintelligence-news.com/news/xpeng-iron-humanoid-robot-draws-record-physical-ai-funding/"},
-    {"title": "Amazon's Prime Air autonomous drones to reach 500 US cities", "date": "August 20, 2026", "url": "https://www.artificialintelligence-news.com/news/amazons-prime-air-autonomous-drones-to-reach-500-us-cities/"}
+    {
+      "title": "Arm launches Total Design for Physical AI and robotics framework",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/arm-total-design-for-physical-ai-and-robotics-framework/"
+    },
+    {
+      "title": "Coca-Cola uses AI to improve retailer ordering in Malaysia",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/coca-cola-ai-retailer-ordering-malaysia/"
+    },
+    {
+      "title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/"
+    },
+    {
+      "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/"
+    },
+    {
+      "title": "M&T Bank expands enterprise AI after years of technology overhaul",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/"
+    },
+    {
+      "title": "NVIDIA to acquire Hugging Face for $12.93B",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/"
+    },
+    {
+      "title": "Motional and MIT AI explains self-driving car decisions",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/"
+    },
+    {
+      "title": "ChatGPT Ads passes $1B run rate in 200 days",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/chatgpt-ads-passes-1b-run-rate-in-200-days/"
+    },
+    {
+      "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/"
+    },
+    {
+      "title": "A quarter of Nvidia\u2019s business next year comes from labs it is financing",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs/"
+    },
+    {
+      "title": "Gatik raises $200M to scale AI-powered autonomous freight",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/gatik-200m-ai-autonomous-freight/"
+    },
+    {
+      "title": "NVIDIA Jetson Orin Nano 2 brings physical AI to drones and robots",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/nvidia-jetson-orin-nano-2-physical-ai-to-drones-and-robots/"
+    },
+    {
+      "title": "Hershey applies AI across its supply chain operations",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/hershey-applies-ai-across-its-supply-chain-operations/"
+    },
+    {
+      "title": "With higher risk and broader impact, AI security is the new supply chain problem",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/with-higher-risk-and-broader-impact-ai-security-is-the-new-supply-chain-problem/"
+    },
+    {
+      "title": "Thailand becomes one of the first in Asia to get the Sora app",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/thailand-becomes-one-of-the-first-in-asia-to-get-the-sora-app/"
+    },
+    {
+      "title": "Malaysia launches Ryt Bank, its first AI-powered bank",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/malaysia-launches-ryt-bank-its-first-ai-powered-bank/"
+    },
+    {
+      "title": "Google\u2019s Veo 3 AI video creation tools are now widely available",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/google-veo-3-ai-video-creation-tools-now-widely-available/"
+    },
+    {
+      "title": "Microsoft\u2019s Majorana 2 quantum chip is also a case study for agentic AI in R&D",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/microsoft-discovery-agentic-ai-majorana-2/"
+    },
+    {
+      "title": "US and Japan announce sweeping AI and tech collaboration",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/us-and-japan-sweeping-ai-tech-collaboration/"
+    },
+    {
+      "title": "UK and Canada sign AI compute agreement",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/uk-and-canada-sign-ai-compute-agreement/"
+    }
   ]
 }
