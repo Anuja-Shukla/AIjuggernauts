@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-09-09 08:20 UTC",
+  "updated_at": "2026-09-10 08:20 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "CloudNC aims to accelerate AI supply chain machining",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/cloudnc-aims-to-accelerate-ai-supply-chain-machining/"
+    },
+    {
+      "title": "Samsung taps Mistral AI models for semiconductor manufacturing",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/samsung-mistral-ai-models-for-semiconductor-manufacturing/"
+    },
     {
       "title": "Arm launches Total Design for Physical AI and robotics framework",
       "date": "",
@@ -18,16 +28,6 @@
       "url": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/"
     },
     {
-      "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/"
-    },
-    {
-      "title": "M&T Bank expands enterprise AI after years of technology overhaul",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/"
-    },
-    {
       "title": "NVIDIA to acquire Hugging Face for $12.93B",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/"
@@ -38,9 +38,14 @@
       "url": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/"
     },
     {
-      "title": "ChatGPT Ads passes $1B run rate in 200 days",
+      "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
       "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/chatgpt-ads-passes-1b-run-rate-in-200-days/"
+      "url": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/"
+    },
+    {
+      "title": "M&T Bank expands enterprise AI after years of technology overhaul",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/"
     },
     {
       "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
@@ -48,19 +53,14 @@
       "url": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/"
     },
     {
+      "title": "ChatGPT Ads passes $1B run rate in 200 days",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/chatgpt-ads-passes-1b-run-rate-in-200-days/"
+    },
+    {
       "title": "A quarter of Nvidia\u2019s business next year comes from labs it is financing",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs/"
-    },
-    {
-      "title": "Gatik raises $200M to scale AI-powered autonomous freight",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/gatik-200m-ai-autonomous-freight/"
-    },
-    {
-      "title": "NVIDIA Jetson Orin Nano 2 brings physical AI to drones and robots",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/nvidia-jetson-orin-nano-2-physical-ai-to-drones-and-robots/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
@@ -71,6 +71,11 @@
       "title": "With higher risk and broader impact, AI security is the new supply chain problem",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/with-higher-risk-and-broader-impact-ai-security-is-the-new-supply-chain-problem/"
+    },
+    {
+      "title": "Gatik raises $200M to scale AI-powered autonomous freight",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/gatik-200m-ai-autonomous-freight/"
     },
     {
       "title": "Thailand becomes one of the first in Asia to get the Sora app",
@@ -96,11 +101,6 @@
       "title": "US and Japan announce sweeping AI and tech collaboration",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/us-and-japan-sweeping-ai-tech-collaboration/"
-    },
-    {
-      "title": "UK and Canada sign AI compute agreement",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/uk-and-canada-sign-ai-compute-agreement/"
     }
   ]
 }
