@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quick Case Generator | AIjuggernauts</title>
+  <title>Course Comparison | AIjuggernauts</title>
   <style>
     :root {
       --bg: #171332;
@@ -59,12 +59,29 @@
       font-size: 0.95rem; font-family: inherit;
       background: var(--bg-2); color: var(--text);
     }
-    select { appearance: auto; }
-    input:focus, textarea:focus, select:focus {
+    input:focus, select:focus {
       outline: none; border-color: var(--accent);
       box-shadow: 0 0 0 3px var(--shadow);
     }
-    textarea::placeholder, input::placeholder { color: var(--muted); opacity: 0.6; }
+
+    .intro-section { margin-bottom: 36px; padding-bottom: 30px; border-bottom: 1px solid var(--border); }
+    .section-label {
+      text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem;
+      color: var(--accent); font-weight: 700; margin-bottom: 10px;
+    }
+    .flow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .flow-step {
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
+      padding: 9px 14px; font-size: 0.82rem; font-weight: 600; color: var(--accent-2);
+    }
+    .flow-arrow { color: var(--muted); font-size: 1rem; }
+
+    .platform-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 8px; }
+    .platform-check {
+      display: flex; align-items: center; gap: 8px; background: var(--bg-2);
+      border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; font-size: 0.88rem;
+    }
+    .platform-check input { width: auto; margin: 0; }
 
     .key-box {
       background: rgba(125, 216, 198, 0.08);
@@ -98,27 +115,6 @@
     #status { font-size: 0.9rem; color: var(--muted); }
     #status.error { color: var(--accent-3); }
 
-    .site-footer {
-      border-top: 1px solid var(--border);
-      padding: 26px 0;
-      color: var(--muted);
-      font-size: 0.85rem;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .intro-section { margin-bottom: 36px; padding-bottom: 30px; border-bottom: 1px solid var(--border); }
-    .section-label {
-      text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem;
-      color: var(--accent); font-weight: 700; margin-bottom: 10px;
-    }
-    .flow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-    .flow-step {
-      background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
-      padding: 9px 14px; font-size: 0.82rem; font-weight: 600; color: var(--accent-2);
-    }
-    .flow-arrow { color: var(--muted); font-size: 1rem; }
-
     #result {
       white-space: pre-wrap;
       background: var(--panel);
@@ -130,6 +126,15 @@
       line-height: 1.55;
       color: var(--text);
       display: none;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -159,8 +164,8 @@
     <nav class="tabs">
       <a href="https://aijuggernauts.com/" class="tab">Home</a>
       <a href="https://aijuggernauts.com/tools/simulation-creator.html" class="tab">Simulation Generator</a>
-      <a href="https://aijuggernauts.com/tools/quick-case-generator.html" class="tab active">Quick Case Generator</a>
-      <a href="https://aijuggernauts.com/tools/course-comparison.html" class="tab">Course Comparison</a>
+      <a href="https://aijuggernauts.com/tools/quick-case-generator.html" class="tab">Quick Case Generator</a>
+      <a href="https://aijuggernauts.com/tools/course-comparison.html" class="tab active">Course Comparison</a>
       <a href="https://aijuggernauts.com/conferences/" class="tab">Upcoming Conferences</a>
       <a href="https://aijuggernauts.com/jobs/" class="tab">Faculty Jobs</a>
       <a href="https://aijuggernauts.com/ai-news/" class="tab">AI News</a>
@@ -173,20 +178,19 @@
 <div class="wrap content">
 
   <div class="intro-section">
-    <div class="section-label">Quick Case Generator</div>
-    <h1 style="font-size: 1.5rem; margin: 0 0 6px;">From today's news to tomorrow's classroom.</h1>
+    <div class="section-label">Course Comparison</div>
+    <h1 style="font-size: 1.5rem; margin: 0 0 6px;">Compare courses across platforms before you enroll.</h1>
     <div class="flow">
-      <span class="flow-step">Current News</span><span class="flow-arrow">&rarr;</span>
-      <span class="flow-step">Select Theory</span><span class="flow-arrow">&rarr;</span>
-      <span class="flow-step">AI Analysis</span><span class="flow-arrow">&rarr;</span>
-      <span class="flow-step">Quick Case</span><span class="flow-arrow">&rarr;</span>
-      <span class="flow-step">Discussion Questions</span><span class="flow-arrow">&rarr;</span>
-      <span class="flow-step">Classroom Discussion</span>
+      <span class="flow-step">Pick a Subject</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">Set Preferences</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">AI Comparison</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">Side-by-Side Table</span><span class="flow-arrow">&rarr;</span>
+      <span class="flow-step">Decide</span>
     </div>
   </div>
 
-  <h2>Quick Case Generator</h2>
-  <h5>Built for faculty use. Fill in your teaching requirements below and the AI will generate a full Harvard-style, classroom-ready case study plus a separate faculty teaching note, right here on this page.</h5>
+  <h2>Course Comparison</h2>
+  <h5>Built for students. Enter what you want to learn and your preferences, and the AI will compare how major platforms teach it — format, duration, certification, and typical cost — so you can pick the right one.</h5>
 
   <div class="key-box">
     <h4>Your Google Gemini API Key</h4>
@@ -204,37 +208,49 @@
     </div>
   </div>
 
-  <label for="subject">Subject / Course</label>
-  <div class="hint">e.g. Marketing Management, Strategic Management, Entrepreneurship, Operations, AI &amp; Business</div>
-  <input type="text" id="subject" placeholder="e.g. Strategic Management">
+  <label for="subject">Subject / Skill to Learn</label>
+  <div class="hint">e.g. Data Science, Digital Marketing, Product Management, Generative AI, Financial Modeling</div>
+  <input type="text" id="subject" placeholder="e.g. Data Science">
 
-  <label for="newsLink">News Link (optional)</label>
-  <div class="hint">Paste a URL to a recent news article, company announcement, or industry report to base the case on.</div>
-  <input type="url" id="newsLink" placeholder="https://...">
-
-  <label for="subtopic">Sub-topic / Theory to Be Taught</label>
-  <div class="hint">e.g. STP, Porter's Five Forces, Diffusion of Innovation, Brand Positioning, Blue Ocean Strategy, Change Management</div>
-  <input type="text" id="subtopic" placeholder="e.g. Porter's Five Forces">
-
-  <label for="level">Student Level (optional)</label>
-  <select id="level">
-    <option value="">Not specified — let the AI decide based on subject</option>
-    <option value="Undergraduate">Undergraduate</option>
-    <option value="MBA">MBA</option>
-    <option value="Executive MBA">Executive MBA</option>
-    <option value="PhD">PhD</option>
+  <label for="goal">Career Goal (optional)</label>
+  <select id="goal">
+    <option value="">Not specified</option>
+    <option value="Career switch">Career switch</option>
+    <option value="Upskilling in current role">Upskilling in current role</option>
+    <option value="Academic credit">Academic credit</option>
+    <option value="Personal interest">Personal interest</option>
   </select>
 
-  <label for="length">Case Length (optional)</label>
-  <select id="length">
-    <option value="">Not specified — default to Quick Case</option>
-    <option value="Quick Case">Quick Case</option>
-    <option value="1-page Case">1-page Case</option>
-    <option value="2-page Case">2-page Case</option>
+  <label for="budget">Budget Range (optional)</label>
+  <select id="budget">
+    <option value="">Not specified</option>
+    <option value="Free only">Free only</option>
+    <option value="Under ₹10,000">Under ₹10,000</option>
+    <option value="₹10,000–₹50,000">₹10,000–₹50,000</option>
+    <option value="No budget constraint">No budget constraint</option>
   </select>
+
+  <label for="time">Time Commitment (optional)</label>
+  <select id="time">
+    <option value="">Not specified</option>
+    <option value="Under 4 weeks">Under 4 weeks</option>
+    <option value="1–3 months">1–3 months</option>
+    <option value="3–6 months">3–6 months</option>
+    <option value="Self-paced / no deadline">Self-paced / no deadline</option>
+  </select>
+
+  <label>Platforms to Compare (optional — edit the default list)</label>
+  <div class="platform-grid">
+    <label class="platform-check"><input type="checkbox" value="Coursera" checked> Coursera</label>
+    <label class="platform-check"><input type="checkbox" value="edX" checked> edX</label>
+    <label class="platform-check"><input type="checkbox" value="Udemy" checked> Udemy</label>
+    <label class="platform-check"><input type="checkbox" value="upGrad" checked> upGrad</label>
+    <label class="platform-check"><input type="checkbox" value="Emeritus" checked> Emeritus</label>
+    <label class="platform-check"><input type="checkbox" value="Simplilearn" checked> Simplilearn</label>
+  </div>
 
   <div class="btn-row">
-    <button id="generateBtn" onclick="generateCase()">Generate Case Study</button>
+    <button id="generateBtn" onclick="generateComparison()">Compare Courses</button>
     <button class="secondary" id="copyBtn" onclick="copyResult()" style="display:none;">Copy Result</button>
     <span id="status"></span>
   </div>
@@ -283,113 +299,59 @@
   refreshKeyStatus();
 
   function buildPrompt() {
-    const subject = document.getElementById('subject').value.trim() || "(not specified — infer a reasonable subject)";
-    const newsLink = document.getElementById('newsLink').value.trim() || "None provided — invent a plausible, clearly fictionalized scenario instead";
-    const subtopic = document.getElementById('subtopic').value.trim() || "(not specified — choose a theory that fits the subject)";
-    const level = document.getElementById('level').value || "Not specified — infer based on subject and topic";
-    const length = document.getElementById('length').value || "Quick Case";
+    const subject = document.getElementById('subject').value.trim() || "(not specified — ask the student to provide a subject before proceeding)";
+    const goal = document.getElementById('goal').value || "Not specified";
+    const budget = document.getElementById('budget').value || "Not specified";
+    const time = document.getElementById('time').value || "Not specified";
+    const platforms = Array.from(document.querySelectorAll('.platform-check input:checked')).map(el => el.value);
+    const platformList = platforms.length ? platforms.join(', ') : "Coursera, edX, Udemy, upGrad, Emeritus, Simplilearn";
 
-    return `You are an AI-powered Harvard-style business case study generator designed for faculty members. Your purpose is to transform the faculty inputs below, and where available a current news article, into a concise, classroom-ready case study.
+    return `You are an AI-powered course comparison assistant designed for students exploring online learning options. Your purpose is to help a student compare how a subject or skill is taught across major edtech platforms, so they can make an informed choice.
 
-FACULTY INPUTS (already provided — do not ask for these again):
-- Subject / Course: ${subject}
-- News Link: ${newsLink}
-- Sub-topic / Theory to Be Taught: ${subtopic}
-- Student Level: ${level}
-- Case Length: ${length}
-
-If any optional field above was not provided, make reasonable assumptions based on the subject and topic rather than asking the user.
+STUDENT INPUTS (already provided — do not ask for these again):
+- Subject / Skill to Learn: ${subject}
+- Career Goal: ${goal}
+- Budget Range: ${budget}
+- Time Commitment: ${time}
+- Platforms to Compare: ${platformList}
 
 YOUR TASK
 
-Create a classroom-ready business case from current news, a real-world event, or the selected topic. Identify the relevant business situation, connect it clearly with the selected management theory/concept, generate a realistic case narrative with key facts and decision points, and provide discussion questions that push students to apply the theory, analyze alternatives, and make a recommendation.
+For the subject the student entered, identify one representative, well-known course or program on each selected platform and generate a clear, side-by-side comparison.
 
-Generate a Harvard Business School-style teaching case, but do not copy Harvard cases or reproduce copyrighted case content.
+IMPORTANT CONSTRAINT ON ACCURACY: Do not state specific current prices, enrollment numbers, ratings, or start dates as fixed facts — these change frequently and you do not have live access to each platform. Instead:
+- Describe typical pricing ranges or models (e.g., "subscription-based, typically $39-79/month" rather than an exact figure).
+- Always include a note telling the student to confirm current price, dates, and availability directly on the platform before enrolling.
+- Do not fabricate specific instructor names, exact course titles, or accreditation claims you are not confident about — if unsure, describe the type of offering typically found on that platform instead of inventing a specific course.
 
-IMPORTANT LENGTH CONSTRAINT: Keep the entire response (case + teaching note) complete and self-contained within roughly 1400-1800 words total. Write concisely rather than exhaustively — a shorter, complete case is far more useful than a longer one that gets cut off. Do not pad sections; prioritize the decision, the facts needed to reason about it, and the discussion questions.
+COMPARISON STRUCTURE
 
-The case should be:
-- Decision-oriented
-- Realistic and business-focused
-- Based on a specific organization, manager, entrepreneur, team, or business situation
-- Built around a genuine managerial dilemma
-- Suitable for classroom discussion
-- Concise enough to be used as a quick case
-- Written in an engaging, neutral, analytical style
-- Designed to make students think and make a decision, rather than simply identify the correct answer
+1. Quick Summary
+One or two sentences on how these platforms generally differ in their approach to teaching this subject.
 
-If a news link was provided, use it as the factual starting point for the case. Distinguish clearly between verified facts from the source and reasonable fictionalization used to create the teaching dilemma. Do not invent specific facts, financial figures, quotations, or events and present them as real.
+2. Comparison Table
+A markdown table with columns: Platform | Typical Course Type | Format | Duration | Certification | Price Model | Best For
 
-CASE STRUCTURE
+3. Depth & Rigor Comparison
+A short paragraph comparing how academically rigorous vs. practically applied each platform's offerings tend to be for this subject.
 
-1. Case Title
-Create a short, intriguing title that captures the central dilemma. Avoid titles that reveal the answer.
+4. Credential Value
+A short paragraph on how each platform's certificate is generally perceived (by employers, for academic credit, for portfolio-building) — framed as general reputation, not a ranking or endorsement.
 
-2. Opening Hook
-Begin with a compelling decision moment. Answer: Who is facing the decision? What has happened? Why must a decision be made now? What is at stake? End with the central managerial dilemma.
+5. Decision Guide
+3-4 short conditional recommendations in the format "If your goal is [X], consider [Platform]," tailored to the student's stated goal, budget, and time commitment.
 
-3. Company / Organization Context
-Briefly explain: organization, industry, business model, market position, relevant competitors, recent developments. Keep only information necessary for understanding the decision.
+6. Verification Reminder
+Close with: "Course offerings, pricing, and certificates change frequently. Please verify current details directly on each platform before enrolling."
 
-4. The Trigger
-Explain the event that created the current problem. If a news article was provided, extract the relevant factual information, mention the source context, and use the event as the catalyst for the case — do not simply summarize the article. Transform the news into a managerial decision problem.
+DESIGN PRINCIPLES
+- Objectivity first — do not favor one platform; present trade-offs neutrally.
+- No fabricated specifics — general patterns and typical ranges only, never invented exact data.
+- Student-goal-driven — tailor the "Best For" and "Decision Guide" sections to what the student said they want.
+- Concise — scannable in under 3 minutes; avoid long prose blocks.
+- Actionable ending — the student should finish knowing which 1-2 platforms to actually go look at.
 
-5. The Core Dilemma
-Create a genuine tension between at least two reasonable alternatives. The dilemma should not have an obvious answer.
-
-6. Decision Maker
-Clearly identify: Decision Maker (name/role), Decision Required (what must be decided), Decision Deadline (when).
-
-7. Relevant Data / Exhibits
-Where appropriate, create 2-4 compact exhibits (market data, competitor comparison, customer segments, revenue/profit trends, adoption rates, survey results, SWOT snapshot, cost-benefit comparison, timeline, or strategic alternatives). Clearly label any illustrative or simulated data. If reliable data is unavailable, do not fabricate real-world statistics — use a clearly labelled "Illustrative Classroom Data" exhibit instead.
-
-8. Theory Connection
-The case must naturally connect to the subject (${subject}) and sub-topic/theory (${subtopic}). Explicitly identify where the theory can be applied, but do not provide the answer. Do not turn the case into a textbook explanation of the theory.
-
-9. Student Decision Question
-End the case with a strong decision question ("What should [Decision Maker] do, and why?") plus 2-4 supporting questions that force students to apply the selected theory.
-
-10. Faculty Teaching Note
-After the student-facing case, provide a separate Faculty Teaching Note including: Learning Objectives (2-4, using verbs like Analyze, Evaluate, Apply, Compare, Recommend, Justify), Key Concepts, Suggested Discussion Flow (10-20 minutes), Expected Analytical Directions (multiple defensible approaches — do not imply only one correct answer), Common Student Mistakes, Instructor Questions (5-8 probing questions), and a Possible Conclusion synthesizing how the theory helps explain the decision.
-
-CASE DESIGN PRINCIPLES (follow strictly)
-1. Decision before description — the case must revolve around a decision, not a company profile.
-2. Ambiguity — include enough uncertainty that students must reason rather than retrieve an answer.
-3. Competing alternatives — at least two options should appear reasonable.
-4. Theory application — the selected theory must be necessary or highly useful for solving the case.
-5. No obvious answer — do not explicitly tell students which option is best.
-6. Classroom realism — use realistic constraints such as limited resources, time pressure, competitive threats, conflicting stakeholders, regulatory concerns, organizational resistance, or customer uncertainty.
-7. Concise writing — prioritize Situation -> Tension -> Evidence -> Decision. Avoid unnecessary background information.
-
-OUTPUT FORMAT
-Generate the final output in this order:
-
-CASE TITLE
-Opening Hook
-Company / Organization Context
-What Changed?
-The Decision Maker
-The Dilemma
-Relevant Evidence
-Exhibits
-Decision Point
-Student Discussion Questions
-
----
-
-FACULTY TEACHING NOTE
-Learning Objectives
-Relevant Theory
-Suggested 15-Minute Discussion Plan
-Key Analytical Insights
-Alternative Answers / Perspectives
-Common Student Mistakes
-Instructor Probing Questions
-Teaching Takeaway
-
-Before presenting the case, silently check: Is there a clear decision maker? Is there a real dilemma? Are there at least two defensible alternatives? Can the selected theory actually be applied? Does the case require analysis rather than memorization? Are fictional/illustrative facts clearly identified? Does the case end with a decision question? Does the case avoid giving away the answer? If any answer is "No", revise the case before presenting it.
-
-Goal: Produce a 5-10 minute quick case that a faculty member can use immediately to trigger a meaningful classroom discussion around the selected business theory. Write the full case and teaching note now — do not ask any clarifying questions.`;
+Generate the full comparison now, in the order listed above. Do not ask any clarifying questions.`;
   }
 
   async function callGemini(model, apiKey, prompt) {
@@ -400,7 +362,7 @@ Goal: Produce a 5-10 minute quick case that a faculty member can use immediately
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { maxOutputTokens: 8192 }
+          generationConfig: { maxOutputTokens: 6000 }
         })
       }
     );
@@ -423,7 +385,7 @@ Goal: Produce a 5-10 minute quick case that a faculty member can use immediately
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 
-  async function generateCase() {
+  async function generateComparison() {
     const btn = document.getElementById('generateBtn');
     const status = document.getElementById('status');
     const result = document.getElementById('result');
@@ -433,6 +395,11 @@ Goal: Produce a 5-10 minute quick case that a faculty member can use immediately
     if (!apiKey) {
       status.className = 'error';
       status.innerText = 'Please add your Gemini API key above first.';
+      return;
+    }
+    if (!document.getElementById('subject').value.trim()) {
+      status.className = 'error';
+      status.innerText = 'Please enter a subject or skill to compare.';
       return;
     }
 
@@ -451,7 +418,7 @@ Goal: Produce a 5-10 minute quick case that a faculty member can use immediately
     for (let attempt = 1; attempt <= maxAttempts && !text; attempt++) {
       const model = attempt < maxAttempts ? primaryModel : fallbackModel;
       status.innerText = attempt === 1
-        ? 'Generating your case study — this can take 15-30 seconds...'
+        ? 'Comparing courses — this can take 15-30 seconds...'
         : `Google's servers are busy — retrying (attempt ${attempt} of ${maxAttempts})...`;
       try {
         text = await callGemini(model, apiKey, prompt);
@@ -490,7 +457,6 @@ Goal: Produce a 5-10 minute quick case that a faculty member can use immediately
     });
   }
 </script>
-
 
 </body>
 </html>
