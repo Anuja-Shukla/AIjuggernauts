@@ -1,0 +1,45 @@
+name: Auto-Generate Newsletter Article
+
+on:
+  schedule:
+    # Runs daily at 04:00 UTC — the script itself skips if less than 2 days
+    # have passed since the last auto-generated article, so this produces
+    # a new article roughly every 2 days without the day-of-month edge
+    # cases of a "*/2" cron schedule.
+    - cron: "0 4 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate-article:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate article
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/generate_article.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _newsletter/
+          if git diff --cached --quiet; then
+            echo "No new article generated."
+          else
+            git commit -m "Auto-generate newsletter article"
+            git push
+          fi
