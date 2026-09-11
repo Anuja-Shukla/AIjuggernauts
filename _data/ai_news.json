@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-09-10 08:20 UTC",
+  "updated_at": "2026-09-11 08:15 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "Supply chains detect fast, act slow: How AI agents fix it",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/supply-chains-detect-fast-act-slow-how-ai-agents-fix-it/"
+    },
+    {
+      "title": "JD.com expands physical AI in logistics with 3 million robots",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/jd-com-physical-ai-logistics-3-million-robots/"
+    },
     {
       "title": "CloudNC aims to accelerate AI supply chain machining",
       "date": "",
@@ -23,19 +33,14 @@
       "url": "https://www.artificialintelligence-news.com/news/coca-cola-ai-retailer-ordering-malaysia/"
     },
     {
-      "title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/"
-    },
-    {
       "title": "NVIDIA to acquire Hugging Face for $12.93B",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/"
     },
     {
-      "title": "Motional and MIT AI explains self-driving car decisions",
+      "title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
       "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/"
+      "url": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/"
     },
     {
       "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
@@ -53,14 +58,9 @@
       "url": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/"
     },
     {
-      "title": "ChatGPT Ads passes $1B run rate in 200 days",
+      "title": "Motional and MIT AI explains self-driving car decisions",
       "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/chatgpt-ads-passes-1b-run-rate-in-200-days/"
-    },
-    {
-      "title": "A quarter of Nvidia\u2019s business next year comes from labs it is financing",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/nvidia-circular-financing-ai-labs/"
+      "url": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
