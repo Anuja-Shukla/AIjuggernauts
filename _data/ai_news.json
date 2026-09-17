@@ -1,7 +1,32 @@
 {
-  "updated_at": "2026-09-11 08:15 UTC",
+  "updated_at": "2026-09-17 08:51 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "Microsoft AI CEO criticises Anthropic over model \u2018rights\u2019",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/microsoft-ai-ceo-criticises-anthropic-over-model-rights/"
+    },
+    {
+      "title": "ChatGPT pioneer launches Jev model for programmatic logic",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/chatgpt-pioneer-launches-jev-model-for-programmatic-logic/"
+    },
+    {
+      "title": "Pony.ai unveils autonomous electric truck for logistics fleets",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/pony-ai-autonomous-electric-truck-for-logistics-fleets/"
+    },
+    {
+      "title": "Microsoft AI opens review on Humanist AI Code of Conduct",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/microsoft-ai-opens-review-humanist-ai-code-of-conduct/"
+    },
+    {
+      "title": "Palantir Foundry and cuOpt drive NVIDIA supply chain allocation",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/palantir-foundry-cuopt-nvidia-supply-chain-allocation/"
+    },
     {
       "title": "Supply chains detect fast, act slow: How AI agents fix it",
       "date": "",
@@ -33,34 +58,9 @@
       "url": "https://www.artificialintelligence-news.com/news/coca-cola-ai-retailer-ordering-malaysia/"
     },
     {
-      "title": "NVIDIA to acquire Hugging Face for $12.93B",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/nvidia-to-acquire-hugging-face-for-12-93b/"
-    },
-    {
       "title": "AI weather forecasting enters the energy market as Google targets grid operators with WeatherNext 3",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/ai-weather-forecasting-google-weathernext-3-energy/"
-    },
-    {
-      "title": "MG Ship adds AI route optimisation as logistics returns accelerate",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mg-ship-ai-route-optimisation-logistics-returns-accelerate/"
-    },
-    {
-      "title": "M&T Bank expands enterprise AI after years of technology overhaul",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mt-bank-enterprise-ai-15000-employees/"
-    },
-    {
-      "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/"
-    },
-    {
-      "title": "Motional and MIT AI explains self-driving car decisions",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/motional-and-mit-ai-explains-self-driving-car-decisions/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
@@ -76,6 +76,11 @@
       "title": "Gatik raises $200M to scale AI-powered autonomous freight",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/gatik-200m-ai-autonomous-freight/"
+    },
+    {
+      "title": "OneRail uses Nvidia AI for real-time last-mile delivery optimisation",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/ai-last-mile-delivery-optimisation/"
     },
     {
       "title": "Thailand becomes one of the first in Asia to get the Sora app",
@@ -96,11 +101,6 @@
       "title": "Microsoft\u2019s Majorana 2 quantum chip is also a case study for agentic AI in R&D",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/microsoft-discovery-agentic-ai-majorana-2/"
-    },
-    {
-      "title": "US and Japan announce sweeping AI and tech collaboration",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/us-and-japan-sweeping-ai-tech-collaboration/"
     }
   ]
 }
