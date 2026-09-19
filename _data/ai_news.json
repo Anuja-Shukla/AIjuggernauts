@@ -1,7 +1,12 @@
 {
-  "updated_at": "2026-09-18 08:27 UTC",
+  "updated_at": "2026-09-19 08:14 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "Gartner outlines four AI tiers in warehouse automation",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/gartner-outlines-four-ai-tiers-in-warehouse-automation/"
+    },
     {
       "title": "Adecco Group rolls out Agentforce Coworker to 27,000 staff in 40-plus countries",
       "date": "",
@@ -56,11 +61,6 @@
       "title": "Samsung taps Mistral AI models for semiconductor manufacturing",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/samsung-mistral-ai-models-for-semiconductor-manufacturing/"
-    },
-    {
-      "title": "Arm launches Total Design for Physical AI and robotics framework",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/arm-total-design-for-physical-ai-and-robotics-framework/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
