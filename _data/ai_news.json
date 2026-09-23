@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-09-21 09:14 UTC",
+  "updated_at": "2026-09-23 08:47 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "AutoScheduler launches warehouse app builder for logistics teams",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/autoscheduler-warehouse-app-builder-for-logistics-teams/"
+    },
+    {
+      "title": "Toyota\u2019s $6.4bn robotics estimate puts physical AI in focus",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/toyota-physical-ai-factory-robotics/"
+    },
+    {
+      "title": "Multi-agent AI systems are taking over supply chain execution",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/multi-agent-ai-systems-supply-chain-execution/"
+    },
     {
       "title": "Gartner outlines four AI tiers in warehouse automation",
       "date": "",
@@ -46,21 +61,6 @@
       "title": "Supply chains detect fast, act slow: How AI agents fix it",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/supply-chains-detect-fast-act-slow-how-ai-agents-fix-it/"
-    },
-    {
-      "title": "JD.com expands physical AI in logistics with 3 million robots",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/jd-com-physical-ai-logistics-3-million-robots/"
-    },
-    {
-      "title": "CloudNC aims to accelerate AI supply chain machining",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/cloudnc-aims-to-accelerate-ai-supply-chain-machining/"
-    },
-    {
-      "title": "Samsung taps Mistral AI models for semiconductor manufacturing",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/samsung-mistral-ai-models-for-semiconductor-manufacturing/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
