@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-09-28 10:06 UTC",
+  "updated_at": "2026-09-29 10:04 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "What AMD\u2019s World Labs acquisition means for enterprises building with world models",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/amd-world-labs-world-models-enterprise/"
+    },
+    {
+      "title": "Oracle Fusion drives supply chain planning for Combe",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/oracle-fusion-supply-chain-planning-for-combe/"
+    },
+    {
+      "title": "NVIDIA and over 100 partners launch open AI agent safety platform",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/nvidia-over-100-partners-launch-open-ai-agent-safety-platform/"
+    },
     {
       "title": "Google launches Gemini 3.8 Flash TTS voice models",
       "date": "",
@@ -13,14 +28,14 @@
       "url": "https://www.artificialintelligence-news.com/news/us-transcom-deploys-randomised-ai-to-secure-military-logistics/"
     },
     {
-      "title": "AutoScheduler launches warehouse app builder for logistics teams",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/autoscheduler-warehouse-app-builder-for-logistics-teams/"
-    },
-    {
       "title": "Toyota\u2019s $6.4bn robotics estimate puts physical AI in focus",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/toyota-physical-ai-factory-robotics/"
+    },
+    {
+      "title": "AutoScheduler launches warehouse app builder for logistics teams",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/autoscheduler-warehouse-app-builder-for-logistics-teams/"
     },
     {
       "title": "Multi-agent AI systems are taking over supply chain execution",
@@ -33,34 +48,19 @@
       "url": "https://www.artificialintelligence-news.com/news/gartner-outlines-four-ai-tiers-in-warehouse-automation/"
     },
     {
-      "title": "Lidl deploys driverless truck for store deliveries in Germany",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/lidl-autonomous-truck-germany/"
-    },
-    {
       "title": "Adecco Group rolls out Agentforce Coworker to 27,000 staff in 40-plus countries",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/agentforce-coworker-adecco-group-rollout/"
     },
     {
+      "title": "Lidl deploys driverless truck for store deliveries in Germany",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/lidl-autonomous-truck-germany/"
+    },
+    {
       "title": "Microsoft AI CEO criticises Anthropic over model \u2018rights\u2019",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/microsoft-ai-ceo-criticises-anthropic-over-model-rights/"
-    },
-    {
-      "title": "ChatGPT pioneer launches Jev model for programmatic logic",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/chatgpt-pioneer-launches-jev-model-for-programmatic-logic/"
-    },
-    {
-      "title": "Pony.ai unveils autonomous electric truck for logistics fleets",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/pony-ai-autonomous-electric-truck-for-logistics-fleets/"
-    },
-    {
-      "title": "Microsoft AI opens review on Humanist AI Code of Conduct",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/microsoft-ai-opens-review-humanist-ai-code-of-conduct/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
