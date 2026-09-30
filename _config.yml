@@ -44,6 +44,8 @@ nav:
     url: /ai-news/
   - title: Games
     url: /tools/games.html
+  - title: Create Interactive Game
+    url: /tools/create-game.html
   - title: AI Presentation Creator
     url: /tools/ai-presentation-creator.html
   - title: AI Newsletter
