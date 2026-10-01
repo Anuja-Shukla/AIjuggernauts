@@ -1,7 +1,27 @@
 {
-  "updated_at": "2026-09-29 10:04 UTC",
+  "updated_at": "2026-10-01 10:23 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "MIT Transit Lab secures $2.1M from Google for AI transit platform",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/mit-transit-lab-secures-2-1m-google-for-ai-transit-platform/"
+    },
+    {
+      "title": "Vinasoy reports 20% out-of-stock reduction with AWS AI",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/vinasoy-reports-20-out-of-stock-reduction-aws-ai/"
+    },
+    {
+      "title": "How McDonald\u2019s uses AI to recommend menu prices",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/mcdonalds-ai-menu-pricing/"
+    },
+    {
+      "title": "Meta Muse gains enterprise software connectors",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/meta-muse-gains-enterprise-software-connectors/"
+    },
     {
       "title": "What AMD\u2019s World Labs acquisition means for enterprises building with world models",
       "date": "",
@@ -28,39 +48,19 @@
       "url": "https://www.artificialintelligence-news.com/news/us-transcom-deploys-randomised-ai-to-secure-military-logistics/"
     },
     {
-      "title": "Toyota\u2019s $6.4bn robotics estimate puts physical AI in focus",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/toyota-physical-ai-factory-robotics/"
-    },
-    {
       "title": "AutoScheduler launches warehouse app builder for logistics teams",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/autoscheduler-warehouse-app-builder-for-logistics-teams/"
     },
     {
+      "title": "Toyota\u2019s $6.4bn robotics estimate puts physical AI in focus",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/toyota-physical-ai-factory-robotics/"
+    },
+    {
       "title": "Multi-agent AI systems are taking over supply chain execution",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/multi-agent-ai-systems-supply-chain-execution/"
-    },
-    {
-      "title": "Gartner outlines four AI tiers in warehouse automation",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/gartner-outlines-four-ai-tiers-in-warehouse-automation/"
-    },
-    {
-      "title": "Adecco Group rolls out Agentforce Coworker to 27,000 staff in 40-plus countries",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/agentforce-coworker-adecco-group-rollout/"
-    },
-    {
-      "title": "Lidl deploys driverless truck for store deliveries in Germany",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/lidl-autonomous-truck-germany/"
-    },
-    {
-      "title": "Microsoft AI CEO criticises Anthropic over model \u2018rights\u2019",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/microsoft-ai-ceo-criticises-anthropic-over-model-rights/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
