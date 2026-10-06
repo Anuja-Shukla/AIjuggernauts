@@ -1,31 +1,36 @@
 {
-  "updated_at": "2026-10-02 09:59 UTC",
+  "updated_at": "2026-10-06 10:41 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "Deutsche Telekom targets \u20ac2.5 billion in savings from AI",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/deutsche-telekom-ai-savings/"
+    },
+    {
+      "title": "17 countries set out AI priorities for government science research",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/17-countries-ai-priorities-for-government-science-research/"
+    },
+    {
+      "title": "Microsoft recommends data controls for government AI adoption",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/microsoft-recommends-data-controls-for-government-ai-adoption/"
+    },
+    {
+      "title": "Malaysia\u2019s MACC expands AI use for intelligence-led investigations",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/macc-ai-intelligence-led-investigations/"
+    },
     {
       "title": "MIT Transit Lab secures $2.1M from Google for AI transit platform",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/mit-transit-lab-secures-2-1m-google-for-ai-transit-platform/"
     },
     {
-      "title": "Vinasoy reports 20% out-of-stock reduction with AWS AI",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/vinasoy-reports-20-out-of-stock-reduction-aws-ai/"
-    },
-    {
-      "title": "How McDonald\u2019s uses AI to recommend menu prices",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mcdonalds-ai-menu-pricing/"
-    },
-    {
       "title": "Meta Muse gains enterprise software connectors",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/meta-muse-gains-enterprise-software-connectors/"
-    },
-    {
-      "title": "What AMD\u2019s World Labs acquisition means for enterprises building with world models",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/amd-world-labs-world-models-enterprise/"
     },
     {
       "title": "Oracle Fusion drives supply chain planning for Combe",
@@ -38,29 +43,24 @@
       "url": "https://www.artificialintelligence-news.com/news/nvidia-over-100-partners-launch-open-ai-agent-safety-platform/"
     },
     {
+      "title": "Vinasoy reports 20% out-of-stock reduction with AWS AI",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/vinasoy-reports-20-out-of-stock-reduction-aws-ai/"
+    },
+    {
+      "title": "How McDonald\u2019s uses AI to recommend menu prices",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/mcdonalds-ai-menu-pricing/"
+    },
+    {
+      "title": "What AMD\u2019s World Labs acquisition means for enterprises building with world models",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/amd-world-labs-world-models-enterprise/"
+    },
+    {
       "title": "Google launches Gemini 3.8 Flash TTS voice models",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/google-gemini-3-8-flash-tts-voice-models/"
-    },
-    {
-      "title": "U.S. TRANSCOM deploys randomised AI to secure military logistics",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/us-transcom-deploys-randomised-ai-to-secure-military-logistics/"
-    },
-    {
-      "title": "AutoScheduler launches warehouse app builder for logistics teams",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/autoscheduler-warehouse-app-builder-for-logistics-teams/"
-    },
-    {
-      "title": "Toyota\u2019s $6.4bn robotics estimate puts physical AI in focus",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/toyota-physical-ai-factory-robotics/"
-    },
-    {
-      "title": "Multi-agent AI systems are taking over supply chain execution",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/multi-agent-ai-systems-supply-chain-execution/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
