@@ -1,26 +1,36 @@
 {
-  "updated_at": "2026-10-06 10:41 UTC",
+  "updated_at": "2026-10-08 10:51 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "Abu Dhabi launches AI training programme for 20,000 government employees",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/abu-dhabi-ai-training-government-employees/"
+    },
+    {
+      "title": "Council of Europe and Microsoft sign AI cooperation agreement",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/council-of-europe-microsoft-ai-cooperation-agreement/"
+    },
+    {
+      "title": "Mistral AI launches Large 4 preview ahead of open-weight release",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/mistral-ai-launches-large-4-preview-ahead-open-weight-release/"
+    },
+    {
+      "title": "CyberDSA 2026 opens with Malaysia\u2019s call for secure AI adoption",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/cyberdsa-2026-opens-malaysia-call-for-secure-ai-adoption/"
+    },
     {
       "title": "Deutsche Telekom targets \u20ac2.5 billion in savings from AI",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/deutsche-telekom-ai-savings/"
     },
     {
-      "title": "17 countries set out AI priorities for government science research",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/17-countries-ai-priorities-for-government-science-research/"
-    },
-    {
       "title": "Microsoft recommends data controls for government AI adoption",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/microsoft-recommends-data-controls-for-government-ai-adoption/"
-    },
-    {
-      "title": "Malaysia\u2019s MACC expands AI use for intelligence-led investigations",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/macc-ai-intelligence-led-investigations/"
     },
     {
       "title": "MIT Transit Lab secures $2.1M from Google for AI transit platform",
@@ -33,14 +43,14 @@
       "url": "https://www.artificialintelligence-news.com/news/meta-muse-gains-enterprise-software-connectors/"
     },
     {
-      "title": "Oracle Fusion drives supply chain planning for Combe",
+      "title": "17 countries set out AI priorities for government science research",
       "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/oracle-fusion-supply-chain-planning-for-combe/"
+      "url": "https://www.artificialintelligence-news.com/news/17-countries-ai-priorities-for-government-science-research/"
     },
     {
-      "title": "NVIDIA and over 100 partners launch open AI agent safety platform",
+      "title": "Malaysia\u2019s MACC expands AI use for intelligence-led investigations",
       "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/nvidia-over-100-partners-launch-open-ai-agent-safety-platform/"
+      "url": "https://www.artificialintelligence-news.com/news/macc-ai-intelligence-led-investigations/"
     },
     {
       "title": "Vinasoy reports 20% out-of-stock reduction with AWS AI",
@@ -51,16 +61,6 @@
       "title": "How McDonald\u2019s uses AI to recommend menu prices",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/mcdonalds-ai-menu-pricing/"
-    },
-    {
-      "title": "What AMD\u2019s World Labs acquisition means for enterprises building with world models",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/amd-world-labs-world-models-enterprise/"
-    },
-    {
-      "title": "Google launches Gemini 3.8 Flash TTS voice models",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/google-gemini-3-8-flash-tts-voice-models/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
