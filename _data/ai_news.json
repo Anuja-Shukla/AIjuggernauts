@@ -1,7 +1,22 @@
 {
-  "updated_at": "2026-10-08 10:51 UTC",
+  "updated_at": "2026-10-09 10:50 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "Thread AI partners with US Army on Fire Control Systems",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/thread-ai-partners-with-us-army-on-fire-control-systems/"
+    },
+    {
+      "title": "Marinela Profi, SAS: On governing autonomous AI agents",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/marinela-profi-sas-governing-autonomous-ai-agents/"
+    },
+    {
+      "title": "CFR outlines priorities for White House AI task force",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/cfr-outlines-priorities-white-house-ai-task-force/"
+    },
     {
       "title": "Abu Dhabi launches AI training programme for 20,000 government employees",
       "date": "",
@@ -18,6 +33,11 @@
       "url": "https://www.artificialintelligence-news.com/news/mistral-ai-launches-large-4-preview-ahead-open-weight-release/"
     },
     {
+      "title": "Microsoft recommends data controls for government AI adoption",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/microsoft-recommends-data-controls-for-government-ai-adoption/"
+    },
+    {
       "title": "CyberDSA 2026 opens with Malaysia\u2019s call for secure AI adoption",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/cyberdsa-2026-opens-malaysia-call-for-secure-ai-adoption/"
@@ -26,21 +46,6 @@
       "title": "Deutsche Telekom targets \u20ac2.5 billion in savings from AI",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/deutsche-telekom-ai-savings/"
-    },
-    {
-      "title": "Microsoft recommends data controls for government AI adoption",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/microsoft-recommends-data-controls-for-government-ai-adoption/"
-    },
-    {
-      "title": "MIT Transit Lab secures $2.1M from Google for AI transit platform",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mit-transit-lab-secures-2-1m-google-for-ai-transit-platform/"
-    },
-    {
-      "title": "Meta Muse gains enterprise software connectors",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/meta-muse-gains-enterprise-software-connectors/"
     },
     {
       "title": "17 countries set out AI priorities for government science research",
@@ -53,14 +58,9 @@
       "url": "https://www.artificialintelligence-news.com/news/macc-ai-intelligence-led-investigations/"
     },
     {
-      "title": "Vinasoy reports 20% out-of-stock reduction with AWS AI",
+      "title": "MIT Transit Lab secures $2.1M from Google for AI transit platform",
       "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/vinasoy-reports-20-out-of-stock-reduction-aws-ai/"
-    },
-    {
-      "title": "How McDonald\u2019s uses AI to recommend menu prices",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mcdonalds-ai-menu-pricing/"
+      "url": "https://www.artificialintelligence-news.com/news/mit-transit-lab-secures-2-1m-google-for-ai-transit-platform/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
