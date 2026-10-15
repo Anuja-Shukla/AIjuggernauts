@@ -1,57 +1,24 @@
 title: AIjuggernauts
 description: >-
-  AI tools, resources, and hands-on training for people learning to use AI effectively.
+  AI products and consulting for institutions and businesses: HealthX, SkillX and AI adoption consulting.
 baseurl: ""
 url: "https://aijuggernauts.com"
 
 markdown: kramdown
 permalink: /:categories/:title/
 
-collections:
-  simulations:
-    output: true
-    permalink: /simulations/:path/
-  newsletter:
-    output: true
-    permalink: /newsletter/:path/
-
-defaults:
-  - scope:
-      path: ""
-      type: "simulations"
-    values:
-      layout: "page"
-  - scope:
-      path: ""
-      type: "newsletter"
-    values:
-      layout: "article"
 
 nav:
   - title: Home
     url: /
-  - title: Simulation Generator
-    url: /tools/simulation-creator.html
-  - title: Quick Case Generator
-    url: /tools/quick-case-generator.html
-  - title: Course Comparison
-    url: /tools/course-comparison.html
-  - title: Upcoming Conferences
-    url: /conferences/
-  - title: Faculty Jobs
-    url: /jobs/
+  - title: HealthX
+    url: /healthx/
+  - title: SkillX
+    url: /skillx/
+  - title: AI Consulting
+    url: /consulting/
   - title: AI News
     url: /ai-news/
-  - title: Games
-    url: /tools/games.html
-  - title: Create Interactive Game
-    url: /tools/create-game.html
-  - title: AI Presentation Creator
-    url: /tools/ai-presentation-creator.html
-  - title: Reference Checker
-    url: /tools/reference-checker.html
-  - title: AI Newsletter
-    url: /newsletter/
   - title: Contact Us
     url: /contact/
 
