@@ -44,7 +44,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  min-height: 68px;
   flex-wrap: wrap;
 }
 

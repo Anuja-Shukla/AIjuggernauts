@@ -1,0 +1,1048 @@
+---
+layout: default
+title: Chakravyuha AI
+permalink: /chakravyuha-ai/
+description: "Chakravyuha AI shows how artificial intelligence can help India's armed forces train faster and better: watch, check, simulate and improve, with interactive missions you can try now."
+---
+<style>
+  .cv { --olive: #4B5D2A; --olive-2: #6B7F3A; --khaki: #C8B98A; --ops-bg: #131A11; --ops-panel: #1B2418; --ops-line: #2E3B28; --ops-text: #DCE7CF; --ops-muted: #9CAE8C; --signal: #9BE564; --red: #D2462E; --amber: #E0A100; --green: #2E8B57; }
+  .cv .kicker-olive { display: inline-block; font-size: 0.78rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; color: var(--olive); margin-bottom: 10px; }
+  .cv h1.cv-title { font-family: "Playfair Display", Georgia, serif; font-size: 2.6rem; line-height: 1.1; margin: 0 0 14px; color: var(--text); }
+  .cv h1.cv-title em { font-style: normal; background: linear-gradient(90deg, var(--olive) 0%, var(--accent-strong-2) 60%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  @media (max-width: 600px) { .cv h1.cv-title { font-size: 2rem; } }
+
+  /* Chakravyuha rings */
+  .vyuha-wrap { position: relative; max-width: 420px; margin: 0 auto; }
+  .vyuha { width: 100%; height: auto; display: block; }
+  .vyuha .ring { fill: none; stroke-linecap: round; transform-origin: 210px 210px; cursor: pointer; transition: stroke-width .2s, opacity .2s; }
+  .vyuha .ring:hover, .vyuha .ring.hot { stroke-width: 16; }
+  .vyuha .spin-a { animation: vyspin 38s linear infinite; }
+  .vyuha .spin-b { animation: vyspin 52s linear infinite reverse; }
+  @keyframes vyspin { to { transform: rotate(360deg); } }
+  .vyuha-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 6px; margin-top: 14px; }
+  .vyuha-legend button { display: flex; align-items: center; gap: 8px; background: var(--panel); border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; font: inherit; font-size: 0.8rem; font-weight: 600; color: var(--text); cursor: pointer; text-align: left; }
+  .vyuha-legend button:hover, .vyuha-legend button.hot { border-color: var(--olive); background: #F1F3E8; }
+  .vyuha-legend i { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  .vyuha-tip { min-height: 2.8em; font-size: 0.88rem; color: var(--muted); text-align: center; margin-top: 10px; }
+
+  /* Story + loop */
+  .story { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+  @media (max-width: 760px) { .story { grid-template-columns: 1fr; } }
+  .story blockquote { margin: 0; padding: 18px 20px; background: var(--panel); border: 1px solid var(--border); border-left: 4px solid var(--olive); border-radius: 12px; font-size: 0.98rem; }
+  .loop { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 18px; }
+  @media (max-width: 640px) { .loop { grid-template-columns: repeat(2, 1fr); } }
+  .loop-step { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 14px; text-align: center; transition: transform .3s, border-color .3s, box-shadow .3s; }
+  .loop-step .ico { font-size: 1.6rem; display: block; }
+  .loop-step b { display: block; font-size: 0.95rem; }
+  .loop-step span { font-size: 0.8rem; color: var(--muted); }
+  .loop-step.on { border-color: var(--olive); transform: translateY(-4px); box-shadow: 0 10px 24px rgba(75,93,42,.18); background: #F4F6EC; }
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  @media (max-width: 640px) { .vs-grid { grid-template-columns: 1fr; } }
+  .vs-card { border-radius: 14px; padding: 16px 18px; border: 1px solid var(--border); background: var(--panel); }
+  .vs-card h4 { margin: 0 0 8px; font-size: 0.82rem; text-transform: uppercase; letter-spacing: .06em; }
+  .vs-card ul { margin: 0; padding-left: 18px; font-size: 0.9rem; }
+  .vs-card.old h4 { color: var(--muted); }
+  .vs-card.new { border-color: rgba(75,93,42,.4); background: #F6F8EF; }
+  .vs-card.new h4 { color: var(--olive); }
+
+  .video-wrap video { width: 100%; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(20,33,61,0.12); background: #0f140d; display: block; }
+
+  /* Mission console */
+  .console { background: var(--panel); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; }
+  .console-top { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: center; padding: 20px 22px; background: linear-gradient(135deg, #F3F5EA, #FBF9F3); border-bottom: 1px solid var(--border); }
+  @media (max-width: 640px) { .console-top { grid-template-columns: 1fr; text-align: center; } }
+  .ready-ring { width: 120px; height: 120px; margin: 0 auto; position: relative; }
+  .ready-ring svg { transform: rotate(-90deg); }
+  .ready-ring .val { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; line-height: 1.1; }
+  .ready-ring .val b { font-size: 1.7rem; font-family: "Playfair Display", Georgia, serif; color: var(--olive); }
+  .ready-ring .val small { display: block; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .rank { font-weight: 800; font-size: 1.05rem; color: var(--olive); }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  @media (max-width: 640px) { .badges { justify-content: center; } }
+  .badge-m { display: inline-flex; align-items: center; gap: 6px; padding: 5px 11px; border-radius: 999px; border: 1px dashed var(--border); font-size: 0.8rem; font-weight: 700; color: var(--muted); background: #fff; }
+  .badge-m.got { border-style: solid; border-color: var(--olive); color: var(--olive); background: #EEF2E2; }
+  .mtabs { display: flex; overflow-x: auto; gap: 4px; padding: 10px 12px 0; border-bottom: 1px solid var(--border); background: #FDFCF8; }
+  .mtab { flex: none; border: none; background: none; font: inherit; font-size: 0.88rem; font-weight: 700; color: var(--muted); padding: 10px 14px; border-radius: 10px 10px 0 0; cursor: pointer; border-bottom: 3px solid transparent; }
+  .mtab.active { color: var(--olive); border-bottom-color: var(--olive); background: #fff; }
+  .mtab .sc { font-size: 0.72rem; font-weight: 700; margin-left: 6px; padding: 1px 7px; border-radius: 99px; background: var(--panel-hover); color: var(--muted); }
+  .mtab .sc.done { background: #E3ECD3; color: var(--olive); }
+  .mpanel { display: none; padding: 22px; }
+  .mpanel.active { display: block; }
+  .mhead { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+  .mhead h3 { margin: 0 0 4px; font-size: 1.15rem; }
+  .mhead p { margin: 0; color: var(--muted); font-size: 0.9rem; max-width: 620px; }
+  .layer-tag { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .07em; color: var(--olive); background: #EEF2E2; border-radius: 99px; padding: 3px 10px; white-space: nowrap; }
+  .btn { font: inherit; font-weight: 700; font-size: 0.88rem; border-radius: 10px; padding: 9px 16px; cursor: pointer; border: 1px solid transparent; }
+  .btn.pri { background: linear-gradient(120deg, var(--accent) 0%, var(--accent-3) 100%); color: #241505; }
+  .btn.ol { background: var(--olive); color: #fff; }
+  .btn.sec { background: #fff; border-color: var(--border); color: var(--text); }
+  .btn.sec:hover { border-color: var(--olive); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+  .hud { display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.82rem; }
+  .hud span { background: var(--panel-hover); border-radius: 8px; padding: 4px 10px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .coach { margin-top: 14px; border-radius: 12px; padding: 14px 16px; background: #F4F6EC; border: 1px solid rgba(75,93,42,.3); font-size: 0.9rem; display: none; }
+  .coach b.h { color: var(--olive); display: block; margin-bottom: 4px; }
+  .coach ul { margin: 6px 0 0; padding-left: 18px; }
+
+  /* Mission 1 grid */
+  .gridmap { max-width: 720px; display: grid; gap: 2px; background: #cfc8b2; border: 2px solid #cfc8b2; border-radius: 10px; overflow: hidden; touch-action: manipulation; user-select: none; }
+  .cell { aspect-ratio: 1; position: relative; cursor: pointer; display: grid; place-items: center; font-size: 0.7rem; font-weight: 800; }
+  .t-open { background: #EDE6CF; } .t-forest { background: #8FA86A; } .t-hill { background: #B39B72; }
+  .t-river { background: #6FA7C9; cursor: not-allowed; } .t-bridge { background: repeating-linear-gradient(90deg, #8a6a43 0 4px, #a88456 4px 8px); }
+  .t-danger { background: repeating-linear-gradient(45deg, #F1D9D2 0 5px, #E7B3A6 5px 10px); cursor: not-allowed; }
+  .cell.path::after { content: ""; position: absolute; inset: 22%; border-radius: 50%; background: var(--accent-strong); box-shadow: 0 0 0 2px #fff; }
+  .cell.ai::before { content: ""; position: absolute; inset: 32%; border-radius: 3px; background: var(--accent); box-shadow: 0 0 0 2px #241505; z-index: 1; }
+  .cell.start, .cell.goal { color: #fff; } .cell.start { background: var(--olive); } .cell.goal { background: var(--red); }
+  .cell.start::after, .cell.goal::after { display: none; }
+  .legend-mini { display: flex; flex-wrap: wrap; gap: 10px 16px; font-size: 0.78rem; color: var(--muted); margin-top: 10px; }
+  .legend-mini i { display: inline-block; width: 13px; height: 13px; border-radius: 3px; vertical-align: -2px; margin-right: 5px; border: 1px solid rgba(0,0,0,.12); }
+
+  /* Mission 2 triage */
+  .tri-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+  .casualty { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: #fff; display: flex; flex-direction: column; gap: 6px; }
+  .casualty .cid { font-size: 0.72rem; font-weight: 800; color: var(--muted); letter-spacing: .05em; }
+  .casualty .desc { font-size: 0.86rem; }
+  .vit { display: flex; flex-wrap: wrap; gap: 4px; }
+  .vit span { font-size: 0.72rem; background: var(--panel-hover); border-radius: 6px; padding: 2px 7px; font-weight: 600; }
+  .tags3 { display: flex; gap: 4px; margin-top: auto; }
+  .tags3 button { flex: 1; font: inherit; font-size: 0.74rem; font-weight: 800; border-radius: 8px; padding: 6px 4px; cursor: pointer; border: 2px solid transparent; color: #fff; opacity: .55; }
+  .tags3 button.sel { opacity: 1; box-shadow: 0 0 0 2px #fff, 0 0 0 4px currentColor; }
+  .tg-imm { background: var(--red); } .tg-del { background: var(--amber); color: #241505 !important; } .tg-min { background: var(--green); }
+  .casualty.right { border-color: var(--green); box-shadow: 0 0 0 2px rgba(46,139,87,.25); }
+  .casualty.wrong { border-color: var(--red); box-shadow: 0 0 0 2px rgba(210,70,46,.2); }
+  .casualty .why { display: none; font-size: 0.78rem; color: var(--text); background: #F8F6EE; border-radius: 8px; padding: 6px 8px; }
+
+  /* Mission 3 + 4 canvases */
+  .ops-screen { position: relative; background: var(--ops-bg); border-radius: 12px; overflow: hidden; border: 1px solid #0b0f0a; }
+  .ops-screen canvas { display: block; width: 100%; height: auto; cursor: crosshair; touch-action: manipulation; }
+  .ops-overlay { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: var(--ops-text); background: rgba(10,14,9,.78); padding: 20px; }
+  .ops-overlay h4 { margin: 0 0 6px; font-size: 1.1rem; color: var(--signal); }
+  .ops-overlay p { margin: 0 0 14px; font-size: 0.88rem; max-width: 460px; }
+  .classify { position: absolute; display: none; gap: 4px; background: rgba(12,18,10,.95); border: 1px solid var(--signal); border-radius: 10px; padding: 6px; z-index: 3; }
+  .classify button { font: inherit; font-size: 0.78rem; font-weight: 700; border: 1px solid var(--ops-line); background: var(--ops-panel); color: var(--ops-text); border-radius: 7px; padding: 6px 9px; cursor: pointer; }
+  .classify button.sugg { border-color: var(--signal); color: var(--signal); }
+  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .cmp div { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: #fff; font-size: 0.86rem; }
+  .cmp b.big { font-size: 1.5rem; font-family: "Playfair Display", Georgia, serif; color: var(--olive); display: block; }
+
+  /* Mission 4 */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  @media (max-width: 820px) { .two-col { grid-template-columns: 1fr; } }
+  .manual-note { font-size: 0.82rem; color: var(--muted); background: #FAF8F1; border-left: 3px solid var(--khaki); border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; }
+  .order-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+  .order-list li { display: flex; gap: 10px; align-items: center; border: 1px solid var(--border); border-radius: 10px; padding: 8px 10px; background: #fff; cursor: pointer; font-size: 0.86rem; }
+  .order-list li .n { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--panel-hover); font-weight: 800; font-size: 0.8rem; color: var(--muted); }
+  .order-list li.picked .n { background: var(--olive); color: #fff; }
+  .order-list li.ok { border-color: var(--green); } .order-list li.bad { border-color: var(--red); }
+  .order-list li .fix { margin-left: auto; font-size: 0.72rem; color: var(--red); font-weight: 700; white-space: nowrap; }
+  .slider { display: grid; grid-template-columns: 110px 1fr 64px; gap: 10px; align-items: center; font-size: 0.85rem; margin: 6px 0; }
+  .slider input { width: 100%; accent-color: var(--olive); }
+  .slider output { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+  .rocket-svg { width: 100%; height: auto; background: #FBFAF5; border: 1px solid var(--border); border-radius: 10px; }
+  .margin-read { font-weight: 800; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .seg button { font: inherit; font-size: 0.8rem; font-weight: 700; border: none; background: #fff; padding: 6px 10px; cursor: pointer; color: var(--muted); }
+  .seg button.on { background: var(--olive); color: #fff; }
+
+  /* Quiz */
+  .quiz-q { font-weight: 700; font-size: 1.02rem; margin: 6px 0 12px; }
+  .quiz-opts { display: grid; gap: 8px; }
+  .quiz-opts button { text-align: left; font: inherit; font-size: 0.92rem; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px; cursor: pointer; }
+  .quiz-opts button:hover:not(:disabled) { border-color: var(--olive); }
+  .quiz-opts button.right { border-color: var(--green); background: #E8F4EC; }
+  .quiz-opts button.wrong { border-color: var(--red); background: #FBE9E5; }
+  .quiz-exp { display: none; margin-top: 12px; font-size: 0.88rem; background: #F4F6EC; border-radius: 10px; padding: 10px 12px; }
+  .qprog { height: 6px; background: var(--panel-hover); border-radius: 99px; overflow: hidden; margin-bottom: 10px; }
+  .qprog i { display: block; height: 100%; background: var(--olive); width: 0; transition: width .3s; }
+
+  /* India explorer */
+  .uc-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .uc-tabs button { font: inherit; font-size: 0.86rem; font-weight: 700; border: 1px solid var(--border); background: var(--panel); border-radius: 999px; padding: 8px 14px; cursor: pointer; color: var(--text); }
+  .uc-tabs button.on { background: var(--accent-strong); border-color: var(--accent-strong); color: #fff; }
+  .uc-body { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 760px) { .uc-body { grid-template-columns: 1fr; } }
+  .uc-body > div { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; font-size: 0.9rem; }
+  .uc-body h4 { margin: 0 0 6px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-strong-2); }
+  .uc-body p { margin: 0; }
+  .timeline { list-style: none; padding: 0; margin: 26px 0 0; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 70px; top: 6px; bottom: 6px; width: 2px; background: var(--border); }
+  .timeline li { display: grid; grid-template-columns: 58px 1fr; gap: 26px; margin-bottom: 14px; position: relative; font-size: 0.9rem; }
+  .timeline li::before { content: ""; position: absolute; left: 65px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--olive); box-shadow: 0 0 0 3px var(--bg); }
+  .timeline b.y { font-family: "Playfair Display", Georgia, serif; color: var(--olive); text-align: right; }
+
+  /* Responsible AI */
+  .decide-card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; }
+  .decide-card p.s { margin: 0 0 10px; font-weight: 600; }
+  .decide-card .opts { display: flex; flex-wrap: wrap; gap: 6px; }
+  .decide-card .opts button { font: inherit; font-size: 0.82rem; font-weight: 700; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .decide-card .opts button.best { border-color: var(--green); background: #E8F4EC; }
+  .decide-card .opts button.meh { border-color: var(--amber); background: #FFF6DB; }
+  .decide-card .opts button.no { border-color: var(--red); background: #FBE9E5; }
+  .decide-card .fb { display: none; font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+  .sources { font-size: 0.8rem; color: var(--muted); }
+  .sources a { color: var(--accent-strong); }
+  .sources li { margin-bottom: 4px; }
+</style>
+
+<div class="cv">
+
+<!-- ============ HERO ============ -->
+<div class="hero-flex">
+  <div>
+    <span class="kicker-olive">AI for India's defence &amp; security training</span>
+    <h1 class="cv-title">Chakravyuha <em>AI</em></h1>
+    <p class="lead">Abhimanyu could break into the Chakravyuha but not out of it, because his training was incomplete. Chakravyuha AI is about <b>complete training</b>: every jawan watches, checks, practises and improves until the skill is second nature.</p>
+    <p class="sub">Try the missions below. They are short, safe simulations built the same way we turn a training manual into practice.</p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#missions">Start the missions</a>
+      <a class="btn-secondary" href="#learn">Watch the video</a>
+    </div>
+  </div>
+  <div>
+    <div class="vyuha-wrap">
+      <svg class="vyuha" viewBox="0 0 420 420" role="img" aria-label="Seven rings of the Chakravyuha, each a layer of AI-enabled training">
+        <defs><radialGradient id="cvCore" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffe3a3"/><stop offset="100%" stop-color="#f5a623"/></radialGradient></defs>
+        <g id="vyRings"></g>
+        <circle cx="210" cy="210" r="36" fill="url(#cvCore)"/>
+        <text x="210" y="206" text-anchor="middle" font-size="15" font-weight="800" fill="#241505">JAWAN</text>
+        <text x="210" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#5a3a06">at the centre</text>
+      </svg>
+      <div class="vyuha-legend" id="vyLegend"></div>
+      <div class="vyuha-tip" id="vyTip">Tap a ring to see each layer of AI-enabled training.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STORY ============ -->
+<div class="section" id="story">
+  <div class="section-label">The Abhimanyu lesson</div>
+  <h2 class="section-title">Half-learned is not trained</h2>
+  <div class="story">
+    <div>
+      <blockquote>Abhimanyu heard how to <b>enter</b> the Chakravyuha while still in his mother's womb, but the lesson on how to <b>exit</b> was never finished. On the 13th day of the Kurukshetra war, that gap in his training trapped him.</blockquote>
+      <p style="color:var(--muted);font-size:.95rem;margin-top:14px">Thick manuals and long lectures leave the same kind of gaps. A jawan may <i>read</i> the procedure, but has never <i>done</i> it under pressure. AI changes this by turning each manual into a short, repeatable loop that tells the instructor exactly where every trainee needs more practice.</p>
+    </div>
+    <div>
+      <div class="vs-grid" style="margin-top:0">
+        <div class="vs-card old"><h4>Old way: read the book</h4><ul><li>A 300+ page manual</li><li>Same pace for everyone</li><li>Tested once, weeks later</li><li>Mistakes happen in the field</li></ul></div>
+        <div class="vs-card new"><h4>New way: the AI training loop</h4><ul><li>5-minute micro-video</li><li>Instant quiz with feedback</li><li>Simulation: fail safely, repeat</li><li>AI coach targets weak spots</li></ul></div>
+      </div>
+      <div class="loop" id="loop">
+        <div class="loop-step"><span class="ico">🎬</span><b>Watch</b><span>Short video</span></div>
+        <div class="loop-step"><span class="ico">✅</span><b>Check</b><span>Quick quiz</span></div>
+        <div class="loop-step"><span class="ico">🎯</span><b>Practise</b><span>Simulation</span></div>
+        <div class="loop-step"><span class="ico">🧠</span><b>Improve</b><span>AI coach</span></div>
+      </div>
+      <div class="row"><button class="btn ol" id="loopBtn">▶ Run the training loop</button><span id="loopTxt" style="font-size:.85rem;color:var(--muted)"></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ VIDEO ============ -->
+<div class="section" id="learn">
+  <div class="hero-flex" style="padding:0">
+    <div>
+      <div class="section-label">Watch</div>
+      <h2 class="section-title">From manual to mission-ready</h2>
+      <p class="section-sub">A 75-second explainer for commanders, instructors and trainees: why a jawan learns faster with a video, a quiz and a simulation than with a book alone.</p>
+      <ul class="checks" style="grid-template-columns:1fr">
+        <li>Turns a thick manual into bite-sized lessons</li>
+        <li>Checks understanding in seconds</li>
+        <li>Lets trainees practise risky drills safely</li>
+        <li>Shows instructors who is ready, and who is not</li>
+      </ul>
+    </div>
+    <div class="video-wrap">
+      <video src="{{ '/assets/videos/chakravyuha-explainer.mp4' | relative_url }}" poster="{{ '/assets/videos/chakravyuha-explainer-poster.jpg' | relative_url }}" controls playsinline preload="none" aria-label="Chakravyuha AI explainer video: manual to simulation"></video>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MISSIONS ============ -->
+<div class="section" id="missions">
+  <div class="section-label">Practise</div>
+  <h2 class="section-title">Training ground: five missions</h2>
+  <p class="section-sub">Each mission is a short simulation with an AI coach. Complete all five to raise your readiness score and earn every badge.</p>
+
+  <div class="console">
+    <div class="console-top">
+      <div class="ready-ring">
+        <svg width="120" height="120" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="#E7E3D4" stroke-width="12"/><circle id="readyArc" cx="60" cy="60" r="50" fill="none" stroke="#4B5D2A" stroke-width="12" stroke-linecap="round" stroke-dasharray="314.16" stroke-dashoffset="314.16" style="transition:stroke-dashoffset .8s ease"/></svg>
+        <div class="val"><div><b id="readyPct">0</b><small>Readiness</small></div></div>
+      </div>
+      <div>
+        <div class="rank" id="rankTxt">Rank: Recruit</div>
+        <div style="font-size:.86rem;color:var(--muted)" id="rankSub">Complete missions to build your training record.</div>
+        <div class="badges" id="badges"></div>
+      </div>
+    </div>
+    <div class="mtabs" role="tablist" id="mtabs"></div>
+
+    <!-- Mission 1: Patrol route -->
+    <div class="mpanel active" id="m-nav">
+      <div class="mhead">
+        <div><h3>Mission 1 · Patrol route to the forward post</h3>
+        <p>Plan the fastest safe route from base <b>B</b> to post <b>P</b>. Tap neighbouring squares to draw your route; tap the last square to undo. Forest is slow, hills are slower, rivers can only be crossed at bridges, and the AI weather model has flagged avalanche-risk zones.</p></div>
+        <span class="layer-tag">Decide</span>
+      </div>
+      <div class="row" style="margin-top:0;margin-bottom:10px">
+        <div class="seg" id="mapSeg"><button class="on" data-map="0">High-altitude patrol</button><button data-map="1">Flood relief</button></div>
+        <div class="hud"><span id="navCost">Route time: 0 min</span><span id="navSteps">Steps: 0</span></div>
+      </div>
+      <div class="gridmap" id="gridmap"></div>
+      <div class="legend-mini" id="navLegend"></div>
+      <div class="row">
+        <button class="btn pri" id="navSubmit">Submit route</button>
+        <button class="btn sec" id="navAi">Show AI route</button>
+        <button class="btn sec" id="navReset">Clear</button>
+      </div>
+      <div class="coach" id="navCoach"></div>
+    </div>
+
+    <!-- Mission 2: Triage -->
+    <div class="mpanel" id="m-tri">
+      <div class="mhead">
+        <div><h3>Mission 2 · Casualty triage drill</h3>
+        <p>A training exercise has gone wrong and there are eight casualties. Tag each one <b>Immediate</b>, <b>Delayed</b> or <b>Minor</b> using the START method (walking? breathing rate? pulse? obeys commands?). The clock starts at your first tag.</p></div>
+        <span class="layer-tag">Care</span>
+      </div>
+      <div class="hud" style="margin-bottom:10px"><span id="triTime">Time: 0 s</span><span id="triDone">Tagged: 0 / 8</span></div>
+      <div class="tri-grid" id="triGrid"></div>
+      <div class="row"><button class="btn pri" id="triSubmit">Submit triage</button><button class="btn sec" id="triReset">Reset drill</button></div>
+      <div class="coach" id="triCoach"></div>
+    </div>
+
+    <!-- Mission 3: Border watch -->
+    <div class="mpanel" id="m-watch">
+      <div class="mhead">
+        <div><h3>Mission 3 · Night border watch</h3>
+        <p>Watch the thermal drone feed. <b>Tap every heat signature</b> before it leaves the frame, then label it Person, Vehicle or Animal. Round 1 is just you; in Round 2 an AI vision model draws boxes for you. Be careful: <b>low-confidence boxes can be wrong</b>.</p></div>
+        <span class="layer-tag">Sense</span>
+      </div>
+      <div class="hud" style="margin-bottom:10px"><span id="wRound">Round 1 · Unaided</span><span id="wTime">40 s</span><span id="wScore">Reported: 0</span></div>
+      <div class="ops-screen" id="opsScreen">
+        <canvas id="watchCanvas" width="720" height="380"></canvas>
+        <div class="classify" id="classify"><button data-k="person">Person</button><button data-k="vehicle">Vehicle</button><button data-k="animal">Animal</button></div>
+        <div class="ops-overlay" id="watchOverlay"><div><h4>Round 1 · Unaided watch</h4><p>40 seconds. Tap each heat signature, then label it. Signatures that leave the frame unreported count as missed.</p><button class="btn pri" id="watchStart">Start round 1</button></div></div>
+      </div>
+      <div class="cmp" id="watchCmp" style="display:none"></div>
+      <div class="coach" id="watchCoach"></div>
+    </div>
+
+    <!-- Mission 4: Range safety & stability -->
+    <div class="mpanel" id="m-range">
+      <div class="mhead">
+        <div><h3>Mission 4 · Range safety &amp; flight stability</h3>
+        <p>This mission was built from a manual. It shows how a chapter of text becomes a two-minute drill.</p></div>
+        <span class="layer-tag">Sustain</span>
+      </div>
+      <div class="manual-note">📖 <b>Source manual:</b> the safety-first chapters (organisation and safety code, pre-flight testing, launch-site layout) and the basic aerodynamic balance principle in Capt. Bertrand R. Brinley's <i>Rocket Manual for Amateurs</i> (1960), turned into an ordering drill and a stability lab.</div>
+      <div class="two-col">
+        <div>
+          <h4 style="margin:0 0 6px">A · Put the launch drill in order</h4>
+          <p style="margin:0 0 10px;font-size:.86rem;color:var(--muted)">Tap the steps in the order you would carry them out. Tap a numbered step again to remove it.</p>
+          <ol class="order-list" id="orderList"></ol>
+          <div class="row"><button class="btn pri" id="orderCheck" disabled>Check order</button><button class="btn sec" id="orderReset">Reset</button></div>
+          <div class="coach" id="orderCoach"></div>
+        </div>
+        <div>
+          <h4 style="margin:0 0 6px">B · Stability lab</h4>
+          <p style="margin:0 0 8px;font-size:.86rem;color:var(--muted)">A rocket flies straight only when its <b>centre of gravity (CG)</b> sits ahead of its <b>centre of pressure (CP)</b>, ideally by 1–2 body widths. Adjust it and launch.</p>
+          <svg class="rocket-svg" id="rocketSvg" viewBox="0 0 640 150"></svg>
+          <div class="slider"><label for="noseW">Nose weight</label><input type="range" id="noseW" min="0" max="40" value="0"><output id="noseWo">0 g</output></div>
+          <div class="slider"><label>Fin size</label><div class="seg" id="finSeg"><button data-f="0">Tiny</button><button data-f="1" class="on">Small</button><button data-f="2">Medium</button><button data-f="3">Large</button></div><span></span></div>
+          <div class="slider"><label for="windS">Crosswind</label><input type="range" id="windS" min="0" max="25" value="5"><output id="windSo">5 km/h</output></div>
+          <p style="font-size:.88rem;margin:6px 0">Stability margin: <span class="margin-read" id="marginRead">–</span></p>
+          <div class="ops-screen" style="background:#EAF1F6;border-color:var(--border)"><canvas id="flightCanvas" width="640" height="260" style="cursor:default"></canvas></div>
+          <div class="row"><button class="btn ol" id="launchBtn">🚀 Launch</button><span id="launchTxt" style="font-size:.85rem;color:var(--muted)"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission 5: Quiz -->
+    <div class="mpanel" id="m-quiz">
+      <div class="mhead">
+        <div><h3>Mission 5 · Knowledge check</h3><p>Eight quick questions on everything above. You get instant feedback after each answer.</p></div>
+        <span class="layer-tag">Check</span>
+      </div>
+      <div class="qprog"><i id="qbar"></i></div>
+      <div id="quizBox"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INDIA ============ -->
+<div class="section" id="india">
+  <div class="section-label">Sense · Decide · Sustain</div>
+  <h2 class="section-title">Where AI is helping India's armed forces</h2>
+  <p class="section-sub">Choose an area to see what AI does, a public example from India, and what stays with the human.</p>
+  <div class="uc-tabs" id="ucTabs"></div>
+  <div class="uc-body" id="ucBody"></div>
+  <ul class="timeline" id="timeline"></ul>
+</div>
+
+<!-- ============ RESPONSIBLE AI ============ -->
+<div class="section" id="responsible">
+  <div class="section-label">Protect</div>
+  <h2 class="section-title">Who should decide: AI or the human?</h2>
+  <p class="section-sub">Good defence AI keeps an accountable human in charge of high-stakes calls. Choose who should decide in each case.</p>
+  <div id="decideList"></div>
+  <ul class="checks" style="margin-top:18px">
+    <li>Human in command of high-stakes decisions</li><li>Trained on verified, unbiased data</li><li>Tested in simulation before the field</li><li>Every AI suggestion is logged and auditable</li>
+  </ul>
+</div>
+
+<!-- ============ EDUCATORS ============ -->
+<div class="section">
+  <div class="section-label">For faculty &amp; students</div>
+  <h2 class="section-title">Use this page as a classroom case</h2>
+  <div class="feature-grid">
+    <div class="feature-item"><h4>Discuss</h4><p>Your simulation scores rose in Round 2 with AI help. What could go wrong if a trainee trusted every AI box?</p></div>
+    <div class="feature-item"><h4>Design</h4><p>Pick any manual or SOP you know. Turn one chapter into a four-step loop: watch, check, practise, improve.</p></div>
+    <div class="feature-item"><h4>Debate</h4><p>Where should the line sit between "AI acts" and "AI recommends"? Use the four cases above.</p></div>
+    <div class="feature-item"><h4>Measure</h4><p>How would you prove a simulation-based course trains faster than a book-based one? What data would you collect?</p></div>
+  </div>
+</div>
+
+<!-- ============ CTA ============ -->
+<div class="section">
+  <div class="final-cta">
+    <h2>Turn your training manual into a Chakravyuha</h2>
+    <p>Share a manual, SOP or drill book. We turn it into micro-videos, quizzes and simulations with readiness dashboards for instructors.</p>
+    <a class="btn-primary" href="{{ '/contact/' | relative_url }}?about=Chakravyuha%20AI">Talk to us</a>
+  </div>
+</div>
+
+<div class="section" style="padding-top:30px">
+  <div class="disclaimer"><b>Note:</b> The missions are simplified training illustrations for learning purposes, not operational doctrine. The triage drill follows the civilian START method. Facts about Indian defence AI come from the public sources listed below.</div>
+  <ol class="sources" style="margin-top:18px">
+    <li><a href="https://www.iasgyan.in/daily-current-affairs/armys-ai-roadmap-for-ops-by-2026-27" target="_blank" rel="noopener">Army's AI roadmap for operations by 2026–27</a> (IAS Gyan)</li>
+    <li><a href="https://www.halldale.com/defence/indian-army-expands-training-with-simulators" target="_blank" rel="noopener">Indian Army expands training with simulators</a> (Halldale, Dec 2025)</li>
+    <li><a href="https://www.civilsdaily.com/news/project-wardec-indias-upcoming-ai-powered-wargame-centre/" target="_blank" rel="noopener">Project WARDEC: India's AI-powered wargame centre</a> (Civilsdaily, May 2022)</li>
+    <li><a href="https://www.electronicsforyou.biz/important-sectors/strategic-aerospace-defence-electronics/75-ai-defence-products-launched-by-rajnath-singh/" target="_blank" rel="noopener">75 AI defence products launched at the AI in Defence symposium</a> (Electronics For You, Jul 2022)</li>
+    <li>Brinley, B. R. (1960). <i>Rocket manual for amateurs</i>. Ballantine Books. Used for the safety and stability concepts in Mission 4.</li>
+  </ol>
+</div>
+
+</div>
+
+{% raw %}
+<script>
+(function () {
+'use strict';
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+/* ================= Chakravyuha rings ================= */
+const LAYERS = [
+  { name: 'Learn',    color: '#1E3A5F', tip: 'Learn: micro-videos made from manuals and SOPs.', go: 'learn' },
+  { name: 'Check',    color: '#3C5A7A', tip: 'Check: instant quizzes that catch gaps early.', go: 'missions', tab: 'm-quiz' },
+  { name: 'Practise', color: '#4B5D2A', tip: 'Practise: simulations where mistakes are safe and repeatable.', go: 'missions', tab: 'm-tri' },
+  { name: 'Sense',    color: '#6B7F3A', tip: 'Sense: AI scans drone and camera feeds and flags what matters.', go: 'missions', tab: 'm-watch' },
+  { name: 'Decide',   color: '#8A7A3A', tip: 'Decide: AI suggests routes and options; commanders choose.', go: 'missions', tab: 'm-nav' },
+  { name: 'Sustain',  color: '#B8791A', tip: 'Sustain: predictive maintenance, logistics and safe testing.', go: 'missions', tab: 'm-range' },
+  { name: 'Protect',  color: '#D2662E', tip: 'Protect: responsible AI with a human in command.', go: 'responsible' }
+];
+(function buildRings() {
+  const g = $('vyRings'), leg = $('vyLegend');
+  let svg = '';
+  LAYERS.forEach((L, i) => {
+    const r = 190 - i * 21;
+    const circ = 2 * Math.PI * r;
+    const gap = 26 + i * 3;
+    svg += `<circle class="ring ${i % 2 ? 'spin-b' : 'spin-a'}" data-i="${i}" cx="210" cy="210" r="${r}" stroke="${L.color}" stroke-width="11" stroke-dasharray="${circ - gap} ${gap}" opacity="${0.95 - i * 0.04}"><title>${L.name}</title></circle>`;
+  });
+  g.innerHTML = svg;
+  leg.innerHTML = LAYERS.map((L, i) => `<button data-i="${i}"><i style="background:${L.color}"></i>${i + 1}. ${L.name}</button>`).join('');
+  const hot = i => {
+    document.querySelectorAll('.vyuha .ring, .vyuha-legend button').forEach(el => el.classList.toggle('hot', +el.dataset.i === i));
+    $('vyTip').textContent = LAYERS[i].tip;
+  };
+  const go = i => {
+    hot(i);
+    const L = LAYERS[i];
+    if (L.tab) openTab(L.tab);
+    const el = document.getElementById(L.go);
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+  };
+  document.querySelectorAll('.vyuha .ring').forEach(el => { el.addEventListener('mouseenter', () => hot(+el.dataset.i)); el.addEventListener('click', () => go(+el.dataset.i)); });
+  leg.querySelectorAll('button').forEach(b => { b.addEventListener('mouseenter', () => hot(+b.dataset.i)); b.addEventListener('click', () => go(+b.dataset.i)); });
+})();
+
+/* ================= Loop animation ================= */
+$('loopBtn').addEventListener('click', () => {
+  const steps = [...document.querySelectorAll('#loop .loop-step')];
+  const msgs = ['Watching a 5-minute video on the drill…', 'Quiz: 4 of 5 correct. One gap found.', 'Simulation: the gap is practised 3 times, safely.', 'AI coach: gap closed. Next lesson unlocked.'];
+  $('loopBtn').disabled = true;
+  steps.forEach(s => s.classList.remove('on'));
+  steps.forEach((s, i) => setTimeout(() => { steps.forEach(x => x.classList.remove('on')); s.classList.add('on'); $('loopTxt').textContent = msgs[i]; }, i * 1300));
+  setTimeout(() => { steps.forEach(x => x.classList.add('on')); $('loopTxt').textContent = 'Loop complete: from reading to doing.'; $('loopBtn').disabled = false; }, steps.length * 1300 + 200);
+});
+
+/* ================= Readiness record ================= */
+const MISSIONS = [
+  { id: 'm-nav',   tab: 'Patrol route', badge: '🧭 Navigator' },
+  { id: 'm-tri',   tab: 'Triage',       badge: '⛑️ Combat medic' },
+  { id: 'm-watch', tab: 'Border watch', badge: '🛰️ Watchkeeper' },
+  { id: 'm-range', tab: 'Range safety', badge: '🚀 Range safety' },
+  { id: 'm-quiz',  tab: 'Knowledge check', badge: '📘 Scholar' }
+];
+let SCORES = {};
+try { SCORES = JSON.parse(localStorage.getItem('cv-scores') || '{}') || {}; } catch (e) { SCORES = {}; }
+function setScore(id, val) {
+  val = Math.max(0, Math.min(100, Math.round(val)));
+  SCORES[id] = Math.max(SCORES[id] || 0, val);
+  try { localStorage.setItem('cv-scores', JSON.stringify(SCORES)); } catch (e) {}
+  renderRecord();
+}
+function renderRecord() {
+  const total = MISSIONS.reduce((s, m) => s + (SCORES[m.id] || 0), 0) / MISSIONS.length;
+  const pct = Math.round(total);
+  $('readyPct').textContent = pct;
+  $('readyArc').style.strokeDashoffset = 314.16 * (1 - pct / 100);
+  const rank = pct >= 90 ? 'Mission-ready' : pct >= 70 ? 'Skilled' : pct >= 40 ? 'Trained' : 'Recruit';
+  $('rankTxt').textContent = 'Rank: ' + rank;
+  const done = MISSIONS.filter(m => SCORES[m.id] != null).length;
+  $('rankSub').textContent = done === 5 ? 'All five missions complete. Replay any mission to beat your best.' : `${done} of 5 missions complete. A badge is earned at 70% or more.`;
+  $('badges').innerHTML = MISSIONS.map(m => `<span class="badge-m ${(SCORES[m.id] || 0) >= 70 ? 'got' : ''}">${m.badge}</span>`).join('');
+  document.querySelectorAll('.mtab').forEach(t => {
+    const s = SCORES[t.dataset.id];
+    const sc = t.querySelector('.sc');
+    sc.textContent = s != null ? s + '%' : '–';
+    sc.classList.toggle('done', s != null);
+  });
+}
+$('mtabs').innerHTML = MISSIONS.map((m, i) => `<button class="mtab ${i === 0 ? 'active' : ''}" data-id="${m.id}" role="tab">${i + 1}. ${m.tab}<span class="sc">–</span></button>`).join('');
+function openTab(id) {
+  document.querySelectorAll('.mtab').forEach(t => t.classList.toggle('active', t.dataset.id === id));
+  document.querySelectorAll('.mpanel').forEach(p => p.classList.toggle('active', p.id === id));
+  if (id === 'm-range') drawRocket();
+}
+document.querySelectorAll('.mtab').forEach(t => t.addEventListener('click', () => openTab(t.dataset.id)));
+renderRecord();
+
+/* ================= Mission 1: Patrol route ================= */
+const TERRAIN = {
+  '.': { cls: 't-open',   cost: 1, name: 'Open ground' },
+  'f': { cls: 't-forest', cost: 2, name: 'Forest' },
+  'h': { cls: 't-hill',   cost: 3, name: 'Steep hill' },
+  '~': { cls: 't-river',  cost: null, name: 'River' },
+  '=': { cls: 't-bridge', cost: 1, name: 'Bridge' },
+  'x': { cls: 't-danger', cost: null, name: 'Avalanche risk' },
+  'S': { cls: 't-open',   cost: 1, name: 'Base' },
+  'G': { cls: 't-open',   cost: 1, name: 'Post' }
+};
+const MAPS = [
+  { name: 'High-altitude patrol', danger: 'Avalanche risk (AI weather model)', rows: [
+    'fff..hhhh..xx.G.',
+    'ff..hhhhh..xx...',
+    'f...hhh~~~=~~~..',
+    '....hh.~....hh..',
+    '..ff...~.xx.hhh.',
+    '..ff...=.xx.....',
+    '.......~....ff..',
+    'hh..~~~~...xff..',
+    'S...=..hh..x....',
+    '....~..hh...ff..' ] },
+  { name: 'Flood relief', danger: 'Flooded / unsafe (AI satellite model)', rows: [
+    '....ff~~~...hh.G',
+    '.ff..f~x~..hhh..',
+    '.ff...=x~.......',
+    '......~~~...ff..',
+    'xx..........ff..',
+    'xx...hh..~~~=~~~',
+    '.....hh..~......',
+    '..ff.....~..xx..',
+    'S.ff.....=..xx..',
+    '.........~......' ] }
+];
+let navMap = 0, navPath = [], navAiShown = false, navGrid = [];
+const COLS = 16, ROWS = 10, MIN_PER = 10;
+function navCell(r, c) { return navGrid[r] && navGrid[r][c]; }
+function findChar(ch) { for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) if (navGrid[r][c] === ch) return [r, c]; }
+function astar() {
+  const [sr, sc] = findChar('S'), [gr, gc] = findChar('G');
+  const key = (r, c) => r * COLS + c;
+  const dist = new Map([[key(sr, sc), 0]]), prev = new Map();
+  const open = [[0, sr, sc]];
+  while (open.length) {
+    open.sort((a, b) => a[0] - b[0]);
+    const [, r, c] = open.shift();
+    if (r === gr && c === gc) break;
+    for (const [dr, dc] of [[1,0],[-1,0],[0,1],[0,-1]]) {
+      const nr = r + dr, nc = c + dc;
+      if (nr < 0 || nc < 0 || nr >= ROWS || nc >= COLS) continue;
+      const cost = TERRAIN[navCell(nr, nc)].cost;
+      if (cost == null) continue;
+      const nd = dist.get(key(r, c)) + cost;
+      if (nd < (dist.has(key(nr, nc)) ? dist.get(key(nr, nc)) : Infinity)) {
+        dist.set(key(nr, nc), nd); prev.set(key(nr, nc), [r, c]);
+        open.push([nd + Math.abs(nr - gr) + Math.abs(nc - gc), nr, nc]);
+      }
+    }
+  }
+  const path = []; let cur = [gr, gc];
+  if (!dist.has(key(gr, gc))) return { path: [], cost: Infinity };
+  while (cur) { path.unshift(cur); cur = prev.get(key(cur[0], cur[1])); }
+  return { path, cost: dist.get(key(gr, gc)) - 0 };
+}
+function pathCost(p) { return p.slice(1).reduce((s, [r, c]) => s + TERRAIN[navCell(r, c)].cost, 0); }
+function buildNav() {
+  navGrid = MAPS[navMap].rows.map(r => r.split(''));
+  navPath = [findChar('S')]; navAiShown = false;
+  const gm = $('gridmap');
+  gm.style.gridTemplateColumns = `repeat(${COLS}, 1fr)`;
+  let h = '';
+  for (let r = 0; r < ROWS; r++) for (let c = 0; c < COLS; c++) {
+    const ch = navGrid[r][c], t = TERRAIN[ch];
+    h += `<div class="cell ${t.cls} ${ch === 'S' ? 'start' : ''} ${ch === 'G' ? 'goal' : ''}" data-r="${r}" data-c="${c}" title="${t.name}${t.cost ? ' · ' + t.cost * MIN_PER + ' min' : ' · impassable'}">${ch === 'S' ? 'B' : ch === 'G' ? 'P' : ''}</div>`;
+  }
+  gm.innerHTML = h;
+  $('navLegend').innerHTML = `<span><i class="t-open"></i>Open · 10 min</span><span><i class="t-forest"></i>Forest · 20 min</span><span><i class="t-hill"></i>Steep hill · 30 min</span><span><i class="t-river"></i>${navMap ? 'Floodwater' : 'River'} · impassable</span><span><i class="t-bridge"></i>${navMap ? 'Boat crossing' : 'Bridge'} · 10 min</span><span><i class="t-danger"></i>${MAPS[navMap].danger}</span><span><i style="background:var(--accent)"></i>AI route</span>`;
+  $('navCoach').style.display = 'none';
+  renderNav();
+}
+function renderNav() {
+  document.querySelectorAll('#gridmap .cell').forEach(el => el.classList.remove('path', 'ai'));
+  navPath.forEach(([r, c]) => { const el = document.querySelector(`#gridmap .cell[data-r="${r}"][data-c="${c}"]`); if (el) el.classList.add('path'); });
+  if (navAiShown) astar().path.forEach(([r, c]) => document.querySelector(`#gridmap .cell[data-r="${r}"][data-c="${c}"]`).classList.add('ai'));
+  $('navCost').textContent = `Route time: ${pathCost(navPath) * MIN_PER} min`;
+  $('navSteps').textContent = `Steps: ${navPath.length - 1}`;
+}
+$('gridmap').addEventListener('click', e => {
+  const el = e.target.closest('.cell'); if (!el) return;
+  const r = +el.dataset.r, c = +el.dataset.c;
+  const last = navPath[navPath.length - 1];
+  if (navPath.length > 1 && last[0] === r && last[1] === c) { navPath.pop(); renderNav(); return; }
+  const idx = navPath.findIndex(([pr, pc]) => pr === r && pc === c);
+  if (idx >= 0) { navPath = navPath.slice(0, idx + 1); renderNav(); return; }
+  if (navGrid[last[0]][last[1]] === 'G') return;
+  if (Math.abs(last[0] - r) + Math.abs(last[1] - c) !== 1) { flashCoach('navCoach', 'Tap a square <b>next to</b> the end of your route (no diagonals).'); return; }
+  if (TERRAIN[navGrid[r][c]].cost == null) { flashCoach('navCoach', `That square is impassable: <b>${TERRAIN[navGrid[r][c]].name}</b>. Find a bridge or go around.`); return; }
+  navPath.push([r, c]); renderNav();
+  if (navGrid[r][c] === 'G') submitNav();
+});
+function flashCoach(id, html) { const c = $(id); c.innerHTML = html; c.style.display = 'block'; }
+function submitNav() {
+  const last = navPath[navPath.length - 1];
+  const opt = astar();
+  if (navGrid[last[0]][last[1]] !== 'G') { flashCoach('navCoach', 'Your route has not reached the post <b>P</b> yet. Keep going, or tap <b>Show AI route</b> for a hint.'); return; }
+  const mine = pathCost(navPath);
+  const score = Math.round(100 * opt.cost / mine);
+  navAiShown = true; renderNav();
+  setScore('m-nav', score);
+  const forest = navPath.filter(([r, c]) => navGrid[r][c] === 'f').length, hills = navPath.filter(([r, c]) => navGrid[r][c] === 'h').length;
+  flashCoach('navCoach', `<b class="h">AI coach · route score ${score}%</b>Your route takes <b>${mine * MIN_PER} min</b>. The AI's best route (gold squares) takes <b>${opt.cost * MIN_PER} min</b>.` +
+    `<ul>${score === 100 ? '<li>Perfect: you found an optimal route.</li>' : `<li>You lost <b>${(mine - opt.cost) * MIN_PER} min</b> compared with the AI route.</li>`}` +
+    `${hills ? `<li>Your route crosses <b>${hills}</b> steep-hill square${hills > 1 ? 's' : ''} (30 min each). The AI usually trades a longer distance for flatter ground.</li>` : ''}` +
+    `${forest ? `<li>${forest} forest square${forest > 1 ? 's' : ''}: slower, but they give cover. A commander may choose cover over speed, and that is the human call.</li>` : ''}` +
+    `<li>The AI weighs terrain cost and hazard data in milliseconds; you add judgement about the enemy, the weather and your team.</li></ul>`);
+}
+$('navSubmit').addEventListener('click', submitNav);
+$('navAi').addEventListener('click', () => { navAiShown = !navAiShown; $('navAi').textContent = navAiShown ? 'Hide AI route' : 'Show AI route'; renderNav(); });
+$('navReset').addEventListener('click', () => { navPath = [findChar('S')]; navAiShown = false; $('navAi').textContent = 'Show AI route'; $('navCoach').style.display = 'none'; renderNav(); });
+document.querySelectorAll('#mapSeg button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('#mapSeg button').forEach(x => x.classList.toggle('on', x === b));
+  navMap = +b.dataset.map; $('navAi').textContent = 'Show AI route'; buildNav();
+}));
+buildNav();
+
+/* ================= Mission 2: Triage (START) ================= */
+const CASES = [
+  { d: 'Deep cut on forearm, talking, walks over to you when called.', v: ['Walking: yes', 'Breathing: 18/min'], a: 'min', why: 'Can walk → <b>Minor</b>. In START, anyone who can walk is tagged green first.' },
+  { d: 'Lying down, chest injury, breathing fast and shallow.', v: ['Walking: no', 'Breathing: 34/min', 'Radial pulse: yes'], a: 'imm', why: 'Breathing over 30 per minute → <b>Immediate</b>.' },
+  { d: 'Pale and sweating, leg wound bleeding heavily.', v: ['Walking: no', 'Breathing: 22/min', 'Radial pulse: absent'], a: 'imm', why: 'No radial pulse (poor circulation) → <b>Immediate</b>.' },
+  { d: 'Suspected broken leg, alert, follows instructions.', v: ['Walking: no', 'Breathing: 20/min', 'Radial pulse: yes', 'Obeys: yes'], a: 'del', why: 'Breathing, pulse and mental status all normal, but cannot walk → <b>Delayed</b>.' },
+  { d: 'Unconscious; not breathing until the airway is opened, then breathes.', v: ['Walking: no', 'Breathing: only after airway opened'], a: 'imm', why: 'Starts breathing after the airway is repositioned → <b>Immediate</b>.' },
+  { d: 'Head injury, confused, cannot follow "squeeze my hand".', v: ['Walking: no', 'Breathing: 16/min', 'Radial pulse: yes', 'Obeys: no'], a: 'imm', why: 'Cannot follow simple commands → <b>Immediate</b>.' },
+  { d: 'Twisted ankle, limping but moving on their own.', v: ['Walking: yes (limping)', 'Breathing: 16/min'], a: 'min', why: 'Can walk → <b>Minor</b>, even with a painful injury.' },
+  { d: 'Burns on one arm, in pain, answers questions clearly.', v: ['Walking: no', 'Breathing: 24/min', 'Radial pulse: yes', 'Obeys: yes'], a: 'del', why: 'Breathing under 30, pulse present, obeys commands → <b>Delayed</b>.' }
+];
+let triOrder = [], triTags = {}, triStart = null, triTimer = null, triDoneFlag = false;
+const TAGS = [['imm', 'Immediate', 'tg-imm'], ['del', 'Delayed', 'tg-del'], ['min', 'Minor', 'tg-min']];
+function buildTri() {
+  triOrder = shuffle(CASES.map((_, i) => i)); triTags = {}; triStart = null; triDoneFlag = false;
+  clearInterval(triTimer); $('triTime').textContent = 'Time: 0 s'; $('triCoach').style.display = 'none';
+  $('triGrid').innerHTML = triOrder.map((ci, k) => { const c = CASES[ci]; return `<div class="casualty" data-ci="${ci}"><div class="cid">CASUALTY ${k + 1}</div><div class="desc">${c.d}</div><div class="vit">${c.v.map(x => `<span>${x}</span>`).join('')}</div><div class="tags3">${TAGS.map(([k2, l, cl]) => `<button class="${cl}" data-t="${k2}">${l}</button>`).join('')}</div><div class="why"></div></div>`; }).join('');
+  updTri();
+}
+function updTri() { $('triDone').textContent = `Tagged: ${Object.keys(triTags).length} / 8`; }
+$('triGrid').addEventListener('click', e => {
+  const b = e.target.closest('button[data-t]'); if (!b || triDoneFlag) return;
+  const card = b.closest('.casualty'); const ci = +card.dataset.ci;
+  if (!triStart) { triStart = Date.now(); triTimer = setInterval(() => { $('triTime').textContent = `Time: ${Math.round((Date.now() - triStart) / 1000)} s`; }, 500); }
+  triTags[ci] = b.dataset.t;
+  card.querySelectorAll('button').forEach(x => x.classList.toggle('sel', x === b));
+  updTri();
+});
+$('triSubmit').addEventListener('click', () => {
+  if (Object.keys(triTags).length < 8) { flashCoach('triCoach', `Tag all eight casualties first (${8 - Object.keys(triTags).length} left).`); return; }
+  triDoneFlag = true; clearInterval(triTimer);
+  const secs = Math.round((Date.now() - triStart) / 1000);
+  let right = 0, underTri = 0;
+  document.querySelectorAll('#triGrid .casualty').forEach(card => {
+    const ci = +card.dataset.ci, c = CASES[ci], ok = triTags[ci] === c.a;
+    if (ok) right++; else if (c.a === 'imm') underTri++;
+    card.classList.add(ok ? 'right' : 'wrong');
+    const w = card.querySelector('.why'); w.innerHTML = (ok ? '✅ ' : '❌ ') + c.why; w.style.display = 'block';
+  });
+  const timeBonus = secs <= 60 ? 0 : Math.min(15, Math.round((secs - 60) / 8));
+  const score = Math.max(0, Math.round(right / 8 * 100) - timeBonus);
+  setScore('m-tri', score);
+  flashCoach('triCoach', `<b class="h">AI coach · triage score ${score}%</b><b>${right} of 8</b> correct in <b>${secs} s</b>${timeBonus ? ` (−${timeBonus} for taking over 60 s)` : ''}.<ul>` +
+    `${underTri ? `<li>⚠️ You under-triaged <b>${underTri}</b> critical casualt${underTri > 1 ? 'ies' : 'y'}. That is the most dangerous error. Check breathing rate, pulse and commands first.</li>` : '<li>No critical casualty was missed. Well done.</li>'}` +
+    `<li>The START order is: <b>walk → breathing → pulse → obeys commands</b>. Repeating the drill makes it automatic, which is the point of simulation.</li>` +
+    `<li>In real deployments an AI assistant can read vital-sign sensors and suggest a tag, but the medic confirms it.</li></ul>`);
+});
+$('triReset').addEventListener('click', buildTri);
+buildTri();
+
+/* ================= Mission 3: Border watch ================= */
+const cv = $('watchCanvas'), cx = cv.getContext('2d');
+const W = cv.width, H = cv.height;
+let wObjs = [], wRound = 1, wRunning = false, wT0 = 0, wLast = 0, wSpawnAt = 0, wSel = null, wRes = {}, wNoise = null, wId = 0;
+const ROUND_MS = 40000;
+const KINDS = ['person', 'vehicle', 'animal'];
+function makeNoise() {
+  const c = document.createElement('canvas'); c.width = W; c.height = H; const g = c.getContext('2d');
+  const grd = g.createLinearGradient(0, 0, 0, H); grd.addColorStop(0, '#0d140c'); grd.addColorStop(1, '#1a2617');
+  g.fillStyle = grd; g.fillRect(0, 0, W, H);
+  for (let i = 0; i < 1600; i++) { g.fillStyle = `rgba(150,200,130,${Math.random() * 0.05})`; g.fillRect(Math.random() * W, Math.random() * H, 2, 2); }
+  g.strokeStyle = 'rgba(140,190,120,.18)'; g.lineWidth = 2; g.beginPath();
+  for (let x = 0; x <= W; x += 20) g.lineTo(x, 70 + Math.sin(x / 60) * 14 + Math.sin(x / 23) * 5); g.stroke();
+  g.setLineDash([6, 6]); g.strokeStyle = 'rgba(220,200,120,.35)'; g.beginPath(); g.moveTo(0, 150); g.bezierCurveTo(W * .3, 130, W * .6, 175, W, 150); g.stroke();
+  g.setLineDash([]); g.fillStyle = 'rgba(220,200,120,.5)'; g.font = '11px sans-serif'; g.fillText('FENCE LINE', 10, 142);
+  g.strokeStyle = 'rgba(140,190,120,.12)'; g.lineWidth = 26; g.beginPath(); g.moveTo(0, 300); g.bezierCurveTo(W * .35, 280, W * .65, 330, W, 305); g.stroke();
+  for (let i = 0; i < 26; i++) { g.fillStyle = 'rgba(120,170,100,.10)'; g.beginPath(); g.arc(Math.random() * W, 90 + Math.random() * (H - 100), 6 + Math.random() * 14, 0, 7); g.fill(); }
+  return c;
+}
+function spawn() {
+  const kind = KINDS[Math.floor(Math.random() * 3)];
+  const fromLeft = Math.random() < .5;
+  const o = { id: ++wId, kind, x: fromLeft ? -30 : W + 30, y: 0, dir: fromLeft ? 1 : -1, t: 0, reported: false, label: null, ph: Math.random() * 6 };
+  if (kind === 'vehicle') { o.y = 296 + (Math.random() * 16 - 8); o.v = 80 + Math.random() * 30; o.w = 46; o.h = 20; }
+  else if (kind === 'person') { o.y = 110 + Math.random() * 220; o.v = 22 + Math.random() * 14; o.w = 12; o.h = 30; }
+  else { o.y = 110 + Math.random() * 220; o.v = 30 + Math.random() * 25; o.w = 30; o.h = 16; }
+  // AI detection for round 2
+  const wrong = Math.random() < 0.18;
+  o.aiLabel = wrong ? KINDS.filter(k => k !== kind)[Math.floor(Math.random() * 2)] : kind;
+  o.aiConf = wrong ? 46 + Math.floor(Math.random() * 16) : 74 + Math.floor(Math.random() * 24);
+  wObjs.push(o); wRes.total++;
+}
+function drawObj(o) {
+  const glow = o.reported ? 'rgba(160,200,150,.35)' : '#f4f7d0';
+  cx.save(); cx.translate(o.x, o.y); cx.shadowColor = o.reported ? 'transparent' : 'rgba(255,240,170,.9)'; cx.shadowBlur = o.reported ? 0 : 14; cx.fillStyle = glow;
+  if (o.kind === 'person') {
+    const sw = Math.sin(o.t * 6 + o.ph) * 3;
+    cx.beginPath(); cx.arc(0, -12, 4.5, 0, 7); cx.fill();
+    cx.fillRect(-4, -7, 8, 13);
+    cx.fillRect(-4 + sw * .4, 6, 3, 9); cx.fillRect(1 - sw * .4, 6, 3, 9);
+  } else if (o.kind === 'vehicle') {
+    cx.beginPath(); cx.roundRect ? cx.roundRect(-23, -8, 46, 14, 4) : cx.rect(-23, -8, 46, 14); cx.fill();
+    cx.fillRect(o.dir > 0 ? 4 : -18, -15, 14, 8);
+    cx.beginPath(); cx.arc(-13, 7, 4, 0, 7); cx.arc(13, 7, 4, 0, 7); cx.fill();
+  } else {
+    const sw = Math.sin(o.t * 8 + o.ph) * 2;
+    cx.beginPath(); cx.ellipse(0, 0, 13, 6, 0, 0, 7); cx.fill();
+    cx.beginPath(); cx.arc(o.dir * 14, -4, 4.5, 0, 7); cx.fill();
+    [-9, -4, 4, 9].forEach((lx, i) => cx.fillRect(lx + (i % 2 ? sw : -sw), 4, 2.5, 8));
+  }
+  cx.restore();
+  if (o.reported) {
+    cx.fillStyle = o.label === o.kind ? '#9BE564' : '#FF8A65'; cx.font = 'bold 12px sans-serif'; cx.textAlign = 'center';
+    cx.fillText(o.label === o.kind ? '✓ ' + o.label : '✗ ' + o.label, o.x, o.y - o.h - 6);
+  } else if (wRound === 2) {
+    const low = o.aiConf < 65;
+    cx.strokeStyle = low ? '#E0A100' : '#9BE564'; cx.lineWidth = 1.6; cx.setLineDash(low ? [5, 4] : []);
+    cx.strokeRect(o.x - o.w / 2 - 6, o.y - o.h / 2 - 10, o.w + 12, o.h + 16); cx.setLineDash([]);
+    cx.fillStyle = low ? '#E0A100' : '#9BE564'; cx.font = 'bold 11px sans-serif'; cx.textAlign = 'left';
+    cx.fillText(`${o.aiLabel} ${o.aiConf}%${low ? ' · verify' : ''}`, o.x - o.w / 2 - 6, o.y - o.h / 2 - 14);
+  }
+  if (wSel === o) { cx.strokeStyle = '#fff'; cx.lineWidth = 2; cx.beginPath(); cx.arc(o.x, o.y, 26, 0, 7); cx.stroke(); }
+}
+function drawHUD(now) {
+  cx.fillStyle = 'rgba(155,229,100,.85)'; cx.font = '11px monospace'; cx.textAlign = 'left';
+  cx.fillText(`DRONE-2 · THERMAL · SECTOR 7  ${wRound === 2 ? '· AI ASSIST ON' : ''}`, 10, 18);
+  cx.textAlign = 'right'; cx.fillText(new Date(now).toLocaleTimeString('en-IN', { hour12: false }), W - 10, 18);
+  cx.strokeStyle = 'rgba(155,229,100,.25)'; cx.lineWidth = 1; cx.beginPath(); cx.moveTo(W / 2 - 12, H / 2); cx.lineTo(W / 2 + 12, H / 2); cx.moveTo(W / 2, H / 2 - 12); cx.lineTo(W / 2, H / 2 + 12); cx.stroke();
+}
+function wFrame(now) {
+  if (!wRunning) return;
+  const dt = Math.min(0.05, (now - wLast) / 1000); wLast = now;
+  const el = now - wT0;
+  if (el > wSpawnAt && el < ROUND_MS - 3000) { spawn(); wSpawnAt = el + 1300 + Math.random() * 1200; }
+  wObjs.forEach(o => {
+    o.t += dt;
+    let v = o.v; if (o.kind === 'animal') { v *= (0.6 + 0.6 * Math.abs(Math.sin(o.t * 1.3 + o.ph))); o.y += Math.sin(o.t * 2 + o.ph) * 12 * dt; }
+    o.x += o.dir * v * dt;
+  });
+  wObjs = wObjs.filter(o => { const out = o.x < -60 || o.x > W + 60; if (out) { if (wSel === o) hideClassify(); } return !out; });
+  cx.drawImage(wNoise, 0, 0);
+  wObjs.forEach(drawObj); drawHUD(Date.now());
+  const left = Math.max(0, Math.ceil((ROUND_MS - el) / 1000));
+  $('wTime').textContent = left + ' s';
+  if (el >= ROUND_MS) { endRound(); return; }
+  requestAnimationFrame(wFrame);
+}
+function startRound(r) {
+  wRound = r; wObjs = []; wSel = null; wRes = { total: 0, reported: 0, correct: 0, wrongAiAccepted: 0 };
+  wNoise = wNoise || makeNoise();
+  $('watchOverlay').style.display = 'none'; $('wRound').textContent = r === 1 ? 'Round 1 · Unaided' : 'Round 2 · AI-assisted'; $('wScore').textContent = 'Reported: 0';
+  wRunning = true; wT0 = performance.now(); wLast = wT0; wSpawnAt = 300; requestAnimationFrame(wFrame);
+}
+const roundStats = {};
+function endRound() {
+  wRunning = false; hideClassify();
+  const missed = wRes.total - wRes.reported;
+  roundStats[wRound] = { ...wRes, missed, acc: wRes.total ? Math.round(100 * wRes.correct / wRes.total) : 0 };
+  const ov = $('watchOverlay'); ov.style.display = 'grid';
+  if (wRound === 1) {
+    ov.innerHTML = `<div><h4>Round 1 complete</h4><p>You correctly reported <b>${wRes.correct}</b> of <b>${wRes.total}</b> heat signatures (${roundStats[1].acc}%). ${missed} slipped past unreported.<br><br>Now turn on <b>AI assist</b>. Green boxes are confident; amber dashed boxes are low-confidence, so verify those yourself.</p><button class="btn pri" id="watchStart2">Start round 2 with AI</button></div>`;
+    $('watchStart2').onclick = () => startRound(2);
+  } else {
+    const a = roundStats[1] || { acc: 0, correct: 0, total: 0, missed: 0 }, b = roundStats[2];
+    ov.innerHTML = `<div><h4>Watch complete</h4><p>Unaided: <b>${a.acc}%</b> → AI-assisted: <b>${b.acc}%</b></p><button class="btn pri" id="watchAgain">Play again</button></div>`;
+    $('watchAgain').onclick = () => { ov.innerHTML = `<div><h4>Round 1 · Unaided watch</h4><p>40 seconds. Tap each heat signature, then label it.</p><button class="btn pri" id="watchStartX">Start round 1</button></div>`; $('watchStartX').onclick = () => startRound(1); };
+    $('watchCmp').style.display = 'grid';
+    $('watchCmp').innerHTML = `<div><span>Round 1 · Unaided</span><b class="big">${a.acc}%</b>${a.correct}/${a.total} correct · ${a.missed} missed</div><div><span>Round 2 · AI-assisted</span><b class="big">${b.acc}%</b>${b.correct}/${b.total} correct · ${b.missed} missed</div>`;
+    const score = Math.round(0.35 * a.acc + 0.65 * b.acc);
+    setScore('m-watch', score);
+    flashCoach('watchCoach', `<b class="h">AI coach · watch score ${score}%</b><ul>` +
+      `<li>${b.acc > a.acc ? `AI assist raised your accuracy by <b>${b.acc - a.acc} points</b>: the model never blinks and draws your eye to every signature.` : 'AI assist did not raise your score this time. Speed matters: tap the boxes as soon as they appear.'}</li>` +
+      `<li>${b.wrongAiAccepted ? `⚠️ You accepted <b>${b.wrongAiAccepted}</b> wrong AI label${b.wrongAiAccepted > 1 ? 's' : ''}. Low-confidence (amber) boxes need a human check. This is called <b>automation bias</b>.` : '✅ You did not accept any wrong AI label. That is good human verification of the AI.'}</li>` +
+      `<li>This is how Indian Army surveillance AI is meant to work: AI widens attention, the soldier confirms and decides.</li></ul>`);
+  }
+}
+function hideClassify() { $('classify').style.display = 'none'; wSel = null; }
+function canvasPoint(e) { const r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) * W / r.width, y: (e.clientY - r.top) * H / r.height, px: e.clientX - r.left, py: e.clientY - r.top, rw: r.width, rh: r.height }; }
+cv.addEventListener('click', e => {
+  if (!wRunning) return;
+  const p = canvasPoint(e);
+  let best = null, bd = 40;
+  wObjs.forEach(o => { if (o.reported) return; const d = Math.hypot(o.x - p.x, o.y - p.y); if (d < bd) { bd = d; best = o; } });
+  if (!best) { hideClassify(); return; }
+  wSel = best;
+  const box = $('classify'); box.style.display = 'flex';
+  box.querySelectorAll('button').forEach(b => b.classList.toggle('sugg', wRound === 2 && b.dataset.k === best.aiLabel));
+  const bx = Math.min(Math.max(p.px - 100, 4), p.rw - 214), by = p.py > p.rh - 60 ? p.py - 54 : p.py + 18;
+  box.style.left = bx + 'px'; box.style.top = by + 'px';
+});
+$('classify').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b || !wSel) return;
+  const o = wSel; o.reported = true; o.label = b.dataset.k;
+  wRes.reported++; if (o.label === o.kind) wRes.correct++;
+  if (wRound === 2 && o.label === o.aiLabel && o.aiLabel !== o.kind) wRes.wrongAiAccepted++;
+  $('wScore').textContent = 'Reported: ' + wRes.reported;
+  hideClassify();
+});
+$('watchStart').addEventListener('click', () => startRound(1));
+(function idleDraw() { wNoise = makeNoise(); cx.drawImage(wNoise, 0, 0); drawHUD(Date.now()); })();
+
+/* ================= Mission 4A: Launch drill order ================= */
+const DRILL = [
+  'Range Safety Officer briefs the team on the safety code',
+  'Inspect the vehicle and review pre-flight test results',
+  'Check wind and weather against launch limits',
+  'Clear the range and post look-outs at a safe distance',
+  'Move everyone behind the barrier and take a head-count',
+  'Connect the firing circuit (the RSO keeps the safety key)',
+  'Count down: anyone may call "Abort"',
+  'Recover the vehicle and hold an after-action debrief'
+];
+const DRILL_WHY = [
+  'Safety briefing always comes first: everyone must know the code and who has authority.',
+  'Pre-flight testing catches faults on the bench, not on the pad.',
+  'Weather can cancel the launch, so check it before clearing the range.',
+  'The range is cleared before anyone gets near the launcher.',
+  'People are behind the barrier and counted before anything is connected.',
+  'The firing circuit is connected last, with the key held by the safety officer.',
+  'The countdown gives everyone a final chance to stop the launch.',
+  'The debrief turns each launch into a lesson for the next one.'
+];
+let drillShuffled = [], drillPick = [], drillChecked = false;
+function buildDrill() {
+  drillShuffled = shuffle(DRILL.map((_, i) => i)); drillPick = []; drillChecked = false;
+  $('orderCoach').style.display = 'none'; renderDrill();
+}
+function renderDrill() {
+  $('orderList').innerHTML = drillShuffled.map(i => {
+    const pos = drillPick.indexOf(i);
+    let cls = pos >= 0 ? 'picked' : '', fix = '';
+    if (drillChecked) { cls += pos === i ? ' ok' : ' bad'; if (pos !== i) fix = `<span class="fix">should be ${i + 1}</span>`; }
+    return `<li class="${cls}" data-i="${i}"><span class="n">${pos >= 0 ? pos + 1 : ''}</span><span>${DRILL[i]}</span>${fix}</li>`;
+  }).join('');
+  $('orderCheck').disabled = drillPick.length < DRILL.length || drillChecked;
+}
+$('orderList').addEventListener('click', e => {
+  const li = e.target.closest('li'); if (!li || drillChecked) return;
+  const i = +li.dataset.i, pos = drillPick.indexOf(i);
+  if (pos >= 0) drillPick.splice(pos, 1); else drillPick.push(i);
+  renderDrill();
+});
+let drillScore = null, stabScore = null;
+$('orderCheck').addEventListener('click', () => {
+  drillChecked = true;
+  const right = drillPick.filter((v, k) => v === k).length;
+  drillScore = Math.round(right / DRILL.length * 100);
+  renderDrill();
+  const wrong = drillPick.map((v, k) => ({ v, k })).filter(x => x.v !== x.k).slice(0, 3);
+  flashCoach('orderCoach', `<b class="h">AI coach · drill ${right}/8 in the right place</b>${wrong.length ? '<ul>' + wrong.map(x => `<li><b>Step ${x.v + 1}:</b> ${DRILL_WHY[x.v]}</li>`).join('') + '</ul>' : 'Perfect sequence: safety first, firing circuit last, debrief always.'}`);
+  updRange();
+});
+$('orderReset').addEventListener('click', buildDrill);
+buildDrill();
+
+/* ================= Mission 4B: Stability lab ================= */
+const FIN_CP = [0.50, 0.62, 0.72, 0.84];
+let finIdx = 1;
+const L_CAL = 15; // body length in diameters
+function stab() {
+  const w = +$('noseW').value;
+  const cg = (100 * 0.60 + w * 0.08) / (100 + w);
+  const cp = FIN_CP[finIdx];
+  return { w, cg, cp, m: (cp - cg) * L_CAL, wind: +$('windS').value };
+}
+function drawRocket() {
+  const s = stab();
+  const x0 = 40, len = 540, y = 75, d = 36;
+  const finW = [16, 34, 52, 72][finIdx], finH = [10, 20, 28, 36][finIdx];
+  const cgx = x0 + s.cg * len, cpx = x0 + s.cp * len;
+  const status = s.m < 0 ? ['Unstable', '#D2462E'] : s.m < 1 ? ['Marginal', '#E0A100'] : s.m <= 2.2 ? ['Stable', '#2E8B57'] : ['Over-stable', '#E0A100'];
+  $('rocketSvg').innerHTML = `
+    <path d="M${x0} ${y} Q${x0 + 30} ${y - d / 2} ${x0 + 80} ${y - d / 2} L${x0 + len} ${y - d / 2} L${x0 + len} ${y + d / 2} L${x0 + 80} ${y + d / 2} Q${x0 + 30} ${y + d / 2} ${x0} ${y} Z" fill="#E9E4D3" stroke="#1E3A5F" stroke-width="2"/>
+    <path d="M${x0 + len - finW} ${y - d / 2} L${x0 + len} ${y - d / 2 - finH} L${x0 + len} ${y - d / 2} Z" fill="#4B5D2A"/>
+    <path d="M${x0 + len - finW} ${y + d / 2} L${x0 + len} ${y + d / 2 + finH} L${x0 + len} ${y + d / 2} Z" fill="#4B5D2A"/>
+    ${s.w ? `<circle cx="${x0 + 0.08 * len + 10}" cy="${y}" r="${4 + s.w / 6}" fill="#B8791A"/>` : ''}
+    <g><circle cx="${cgx}" cy="${y}" r="9" fill="#fff" stroke="#1E3A5F" stroke-width="2"/><path d="M${cgx} ${y - 9} A9 9 0 0 1 ${cgx + 9} ${y} L${cgx} ${y} Z M${cgx} ${y + 9} A9 9 0 0 1 ${cgx - 9} ${y} L${cgx} ${y} Z" fill="#1E3A5F"/>
+    <text x="${cgx}" y="${y - 28}" text-anchor="middle" font-size="13" font-weight="800" fill="#1E3A5F">CG</text></g>
+    <g><circle cx="${cpx}" cy="${y}" r="8" fill="#D2662E"/><text x="${cpx}" y="${y + 40}" text-anchor="middle" font-size="13" font-weight="800" fill="#D2662E">CP</text></g>
+    <text x="${x0}" y="140" font-size="12" fill="#5B6472">Nose →</text>
+    <text x="${x0 + len}" y="140" font-size="12" fill="#5B6472" text-anchor="end">← Tail</text>`;
+  $('noseWo').textContent = s.w + ' g'; $('windSo').textContent = s.wind + ' km/h';
+  $('marginRead').innerHTML = `<span style="color:${status[1]}">${s.m.toFixed(1)} body widths · ${status[0]}</span>`;
+  return { s, status: status[0] };
+}
+['noseW', 'windS'].forEach(id => $(id).addEventListener('input', drawRocket));
+document.querySelectorAll('#finSeg button').forEach(b => b.addEventListener('click', () => { finIdx = +b.dataset.f; document.querySelectorAll('#finSeg button').forEach(x => x.classList.toggle('on', x === b)); drawRocket(); }));
+const fc = $('flightCanvas'), fx = fc.getContext('2d');
+function drawFlightBg() {
+  fx.clearRect(0, 0, fc.width, fc.height);
+  const g = fx.createLinearGradient(0, 0, 0, fc.height); g.addColorStop(0, '#DCEAF4'); g.addColorStop(1, '#F4F1E6'); fx.fillStyle = g; fx.fillRect(0, 0, fc.width, fc.height);
+  fx.fillStyle = '#C9BE96'; fx.fillRect(0, fc.height - 22, fc.width, 22);
+  fx.fillStyle = '#8A7A5A'; fx.fillRect(40, fc.height - 40, 6, 18);
+  fx.fillStyle = '#5B6472'; fx.font = '11px sans-serif'; fx.fillText('Wind →', fc.width - 70, 18);
+}
+drawFlightBg();
+let flying = false;
+$('launchBtn').addEventListener('click', () => {
+  if (flying) return;
+  const { s, status } = drawRocket();
+  flying = true; $('launchBtn').disabled = true; $('launchTxt').textContent = '3… 2… 1…';
+  const trail = []; let t = 0;
+  const step = () => {
+    t += 1 / 60;
+    let x, y, ang;
+    const base = Math.min(t * 1.25, 1);
+    if (status === 'Unstable') { const k = t * 3; x = 43 + t * 70 + Math.sin(k * 2.2) * 30 * t; y = 230 - Math.min(t, 1.2) * 150 + (t > 1.2 ? (t - 1.2) * 90 : 0) + Math.cos(k * 2.2) * 20 * t; ang = k * 5; }
+    else if (status === 'Marginal') { x = 43 + t * 120 + Math.sin(t * 9) * 10; y = 230 - t * 175 + Math.cos(t * 9) * 6; ang = -Math.PI / 2 + 0.35 + Math.sin(t * 9) * 0.35; }
+    else if (status === 'Stable') { x = 43 + t * 120 + t * t * s.wind * 0.6; y = 230 - t * 190; ang = -Math.PI / 2 + 0.55 + t * s.wind * 0.004; }
+    else { const tilt = 0.55 - s.wind * 0.035; x = 43 + t * 140 * Math.cos(-tilt + Math.PI / 2) * 0.9 - t * t * s.wind * 2.2; y = 230 - t * 175; ang = -Math.PI / 2 + Math.max(-0.9, tilt - t * s.wind * 0.03); }
+    trail.push([x, y]);
+    drawFlightBg();
+    fx.strokeStyle = 'rgba(120,120,120,.45)'; fx.lineWidth = 3; fx.beginPath(); trail.forEach(([a, b], i) => i ? fx.lineTo(a, b) : fx.moveTo(a, b)); fx.stroke();
+    fx.save(); fx.translate(x, y); fx.rotate(ang + Math.PI / 2); fx.fillStyle = '#1E3A5F'; fx.beginPath(); fx.moveTo(0, -14); fx.lineTo(5, -6); fx.lineTo(5, 12); fx.lineTo(-5, 12); fx.lineTo(-5, -6); fx.closePath(); fx.fill(); fx.fillStyle = '#4B5D2A'; fx.fillRect(-9, 8, 18, 4); fx.fillStyle = '#f5a623'; fx.beginPath(); fx.moveTo(-4, 13); fx.lineTo(0, 22 + Math.random() * 6); fx.lineTo(4, 13); fx.fill(); fx.restore();
+    if (t < 1.6 && y > -20 && x < fc.width + 20 && x > -20) requestAnimationFrame(step);
+    else {
+      flying = false; $('launchBtn').disabled = false;
+      const msg = { Unstable: ['❌ Tumbled. The CP is ahead of the CG, so air pushes the nose around. Add nose weight or bigger fins.', 20], Marginal: ['⚠️ Wobbly flight. The margin is under 1 body width. Add a little nose weight.', 60], Stable: ['✅ Straight and true. A 1–2 body-width margin is the sweet spot.', 100], 'Over-stable': [s.wind > 8 ? '⚠️ Over-stable: it turned into the wind (weathercocking). Use smaller fins or less nose weight.' : '⚠️ Over-stable: it flies, but turns hard into any wind. Aim for a 1–2 width margin.', s.wind > 8 ? 50 : 70] }[status];
+      $('launchTxt').textContent = msg[0];
+      stabScore = Math.max(stabScore || 0, msg[1]); updRange();
+    }
+  };
+  setTimeout(() => requestAnimationFrame(step), 600);
+});
+function updRange() {
+  if (drillScore == null && stabScore == null) return;
+  setScore('m-range', ((drillScore || 0) + (stabScore || 0)) / 2);
+}
+
+/* ================= Mission 5: Quiz ================= */
+const QUIZ = [
+  { q: 'Why was Abhimanyu trapped inside the Chakravyuha?', o: ['He had no weapons', 'He knew how to enter but not how to exit: his training was incomplete', 'He ignored orders', 'The formation was secret'], a: 1, e: 'He learned only half the lesson. Complete training, practised to the end, is the core idea of Chakravyuha AI.' },
+  { q: 'What does a simulation give a jawan that a manual alone cannot?', o: ['More pages to read', 'A certificate', 'Safe, repeated practice of real decisions, with feedback', 'Nothing extra'], a: 2, e: 'Simulations let trainees make mistakes safely and repeat until the skill is automatic.' },
+  { q: "Which is one of the five areas in the Indian Army's AI roadmap for 2026–27?", o: ['Training and simulation', 'Film production', 'Crop insurance', 'Stock trading'], a: 0, e: 'The five areas are surveillance and reconnaissance, command and control, logistics and supply chain, information warfare, and training and simulation.' },
+  { q: 'In START triage, a casualty who can walk is tagged…', o: ['Immediate', 'Delayed', 'Minor', 'Not tagged'], a: 2, e: 'Walking wounded are tagged Minor (green) first, freeing you to find the critical ones.' },
+  { q: 'At night the AI marks a "person" with only 52% confidence. What should the soldier do?', o: ['Act on it immediately', 'Ignore all AI boxes', 'Treat it as a lead and verify it before reporting or acting', 'Switch off the AI'], a: 2, e: 'Low-confidence outputs need human verification. Blind trust is called automation bias.' },
+  { q: 'For a rocket to fly straight, its centre of gravity must be…', o: ['Behind the centre of pressure', 'Ahead of (on the nose side of) the centre of pressure', 'Exactly on the centre of pressure', 'At the tail'], a: 1, e: 'CG ahead of CP by about 1–2 body widths gives a stable flight. That is why Mission 4 adds nose weight.' },
+  { q: 'Which bodies guide AI adoption across India\'s Ministry of Defence?', o: ['DAIC and DAIPA', 'SEBI and RBI', 'ISRO and NASA', 'UGC and AICTE'], a: 0, e: 'The Defence AI Council (DAIC) and the Defence AI Project Agency (DAIPA) steer defence AI policy and projects.' },
+  { q: 'In a high-stakes operation, who should take the final decision?', o: ['The AI model', 'Whoever is fastest', 'An accountable human commander', 'The software vendor'], a: 2, e: 'AI recommends; an accountable human decides. That is the principle of human-in-command.' }
+];
+let qi = 0, qRight = 0, qOrder = [];
+function startQuiz() { qi = 0; qRight = 0; qOrder = QUIZ.map((_, i) => i); renderQ(); }
+function renderQ() {
+  $('qbar').style.width = (qi / QUIZ.length * 100) + '%';
+  if (qi >= QUIZ.length) {
+    const score = Math.round(qRight / QUIZ.length * 100);
+    setScore('m-quiz', score);
+    $('quizBox').innerHTML = `<div class="coach" style="display:block"><b class="h">Knowledge check complete · ${qRight}/${QUIZ.length} (${score}%)</b>${score >= 70 ? 'Badge earned: 📘 Scholar.' : 'Replay the missions, then try again. Repetition is how the loop works.'}</div><div class="row"><button class="btn sec" id="qAgain">Retake quiz</button></div>`;
+    $('qAgain').onclick = startQuiz; return;
+  }
+  const Q = QUIZ[qOrder[qi]];
+  const optOrder = shuffle(Q.o.map((_, i) => i));
+  $('quizBox').innerHTML = `<div style="font-size:.8rem;color:var(--muted);font-weight:700">QUESTION ${qi + 1} OF ${QUIZ.length}</div><div class="quiz-q">${esc(Q.q)}</div><div class="quiz-opts">${optOrder.map(i => `<button data-i="${i}">${esc(Q.o[i])}</button>`).join('')}</div><div class="quiz-exp" id="qexp"></div>`;
+  $('quizBox').querySelectorAll('.quiz-opts button').forEach(b => b.addEventListener('click', () => {
+    const i = +b.dataset.i;
+    $('quizBox').querySelectorAll('.quiz-opts button').forEach(x => { x.disabled = true; if (+x.dataset.i === Q.a) x.classList.add('right'); });
+    if (i === Q.a) qRight++; else b.classList.add('wrong');
+    const ex = $('qexp'); ex.innerHTML = (i === Q.a ? '✅ ' : '❌ ') + esc(Q.e) + `<div class="row" style="margin-top:8px"><button class="btn ol" id="qNext">${qi === QUIZ.length - 1 ? 'See result' : 'Next question'}</button></div>`; ex.style.display = 'block';
+    $('qNext').onclick = () => { qi++; renderQ(); };
+  }));
+}
+startQuiz();
+
+/* ================= India explorer ================= */
+const UC = [
+  { t: 'Training & simulation', what: 'Builds realistic scenarios, adapts difficulty to each trainee, and analyses every drill in an after-action review.', india: 'The Infantry School in Mhow is getting a Combat Training Node with 60+ simulators and training systems, including drone drills and after-action analytics (Dec 2025). Project WARDEC, an AI-based wargaming centre, was planned by the Army Training Command with Rashtriya Raksha University (2022).', human: 'Instructors set the learning goals, judge readiness and run the debrief.' },
+  { t: 'Surveillance & reconnaissance', what: 'Scans drone, satellite and camera feeds around the clock and flags movement or change for an analyst.', india: 'One of the five areas in the Army\'s AI roadmap (85+ use cases, target 2026–27), including facial recognition with real-time analytics for border monitoring.', human: 'Soldiers verify every alert. AI widens attention; it does not decide.' },
+  { t: 'Logistics & maintenance', what: 'Predicts which vehicle or part will fail next, and plans resupply for remote posts before stocks run out.', india: 'The roadmap lists predictive maintenance and automated resupply for forward posts. At the 2022 AI in Defence symposium, defence PSUs showed tools such as a driver-fatigue monitor and AI checks of welding X-rays.', human: 'Logistics officers set priorities when resources are tight.' },
+  { t: 'Command & decision support', what: 'Combines many reports into one picture, runs "what-if" options and highlights risks for commanders.', india: 'AI-enabled war rooms for threat assessment and resource allocation are part of the Army\'s AI push.', human: 'The commander chooses and stays accountable for the decision.' },
+  { t: 'Information & cyber', what: 'Transcribes and translates radio and voice traffic, and spots unusual network activity that may be a cyber attack.', india: 'AI voice transcription and analysis software (Bharat Electronics) was among the 75 AI products launched in July 2022.', human: 'Specialists confirm threats and decide on the response.' },
+  { t: 'Disaster relief & medical', what: 'Plans safe routes through floods, landslides or avalanches, and helps medics prioritise casualties.', india: 'The armed forces are often first responders in Indian disasters. AI route planning and triage support, as in Missions 1 and 2, speed up relief.', human: 'Rescue leaders and medics make the final call on the ground.' }
+];
+const TL = [
+  ['2019', 'The Ministry of Defence sets up the Defence AI Council (DAIC) and the Defence AI Project Agency (DAIPA) to steer AI adoption.'],
+  ['2022', 'Project WARDEC: the Army Training Command and Rashtriya Raksha University plan an AI-powered wargaming centre.'],
+  ['2022', 'The first "AI in Defence" symposium launches 75 AI products across surveillance, logistics, cyber, simulators and more.'],
+  ['2025', 'Combat Training Node at the Infantry School, Mhow: 60+ simulators and training solutions, about ₹120 crore.'],
+  ['2026–27', 'The Army\'s AI roadmap targets operational use of 85+ AI use cases across five areas.']
+];
+$('ucTabs').innerHTML = UC.map((u, i) => `<button data-i="${i}" class="${i === 0 ? 'on' : ''}">${u.t}</button>`).join('');
+function showUC(i) {
+  const u = UC[i];
+  document.querySelectorAll('#ucTabs button').forEach(b => b.classList.toggle('on', +b.dataset.i === i));
+  $('ucBody').innerHTML = `<div><h4>What AI does</h4><p>${u.what}</p></div><div><h4>Example in India</h4><p>${u.india}</p></div><div><h4>The human's role</h4><p>${u.human}</p></div>`;
+}
+document.querySelectorAll('#ucTabs button').forEach(b => b.addEventListener('click', () => showUC(+b.dataset.i)));
+showUC(0);
+$('timeline').innerHTML = TL.map(([y, t]) => `<li><b class="y">${y}</b><span>${t}</span></li>`).join('');
+
+/* ================= Who decides? ================= */
+const DEC = [
+  { s: 'Search 10,000 hours of drone video for frames that show vehicles.', best: 0, r: ['best', 'meh', 'no'], fb: ['Good call. A low-stakes, high-volume search is perfect for AI; humans spot-check the results.', 'Fine, but slow. Let the AI do the search and a human review its shortlist.', 'No human can watch 10,000 hours well. This is exactly where AI helps.'] },
+  { s: 'Decide whether a person near the fence at night is a threat.', best: 1, r: ['no', 'best', 'meh'], fb: ['Too risky. A wrong call could harm an innocent person. AI should alert, not decide.', 'Right. AI raises the alert and the soldier verifies and decides.', 'Possible, but you lose the extra eyes. Let AI alert; the human decides.'] },
+  { s: 'Schedule maintenance for 200 trucks based on sensor data.', best: 0, r: ['best', 'meh', 'no'], fb: ['Right. Predictive maintenance is routine and auditable; officers review exceptions.', 'Also fine. A human sign-off on the weekly plan adds a check.', 'This wastes a strength of AI. Sensor-based scheduling is what it does best.'] },
+  { s: 'Assign triage tags in a mass-casualty situation.', best: 1, r: ['no', 'best', 'meh'], fb: ['Too risky. Vital-sign readings can be wrong; a medic must confirm.', 'Right. AI can suggest a tag from sensor data and the medic confirms it.', 'Acceptable, but AI suggestions can speed up a medic who is overwhelmed.'] }
+];
+const DEC_OPTS = ['AI decides (human reviews)', 'AI recommends, human decides', 'Human only'];
+$('decideList').innerHTML = DEC.map((d, i) => `<div class="decide-card" data-i="${i}"><p class="s">${i + 1}. ${d.s}</p><div class="opts">${DEC_OPTS.map((o, k) => `<button data-k="${k}">${o}</button>`).join('')}</div><div class="fb"></div></div>`).join('');
+document.querySelectorAll('.decide-card').forEach(card => card.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+  const d = DEC[+card.dataset.i], k = +b.dataset.k;
+  card.querySelectorAll('button').forEach(x => x.classList.remove('best', 'meh', 'no'));
+  b.classList.add(d.r[k]);
+  const fb = card.querySelector('.fb'); fb.textContent = d.fb[k]; fb.style.display = 'block';
+})));
+})();
+</script>
+{% endraw %}
