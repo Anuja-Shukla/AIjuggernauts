@@ -1,11 +1,51 @@
 {
-  "updated_at": "2026-10-09 10:50 UTC",
+  "updated_at": "2026-10-16 08:26 UTC",
   "source": "https://www.artificialintelligence-news.com/",
   "articles": [
+    {
+      "title": "NTT Data: Turning disconnected AI efforts into scalable, enterprise-wide impact",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/ntt-data-turning-disconnected-ai-efforts-into-scalable-enterprise-wide-impact/"
+    },
+    {
+      "title": "AI & Big Data Expo Europe sets out the next steps for enterprise AI",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/ai-big-data-expo-europe-sets-out-the-next-steps-for-enterprise-ai/"
+    },
+    {
+      "title": "UPS explores AI to find alternative aircraft parts amid maintenance shortages",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/ups-ai-aircraft-maintenance-parts/"
+    },
+    {
+      "title": "GovTech Singapore and Google DeepMind detail on-device Gemma scam detector",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/govtech-singapore-google-deepmind-on-device-gemma-scam-detector/"
+    },
+    {
+      "title": "UK government expands AI cybersecurity efforts after finding 1,352 vulnerabilities",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/uk-government-ai-cybersecurity-vulnerabilities/"
+    },
+    {
+      "title": "Alibaba details QwenGyre to accelerate extreme-horizon agent training",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/alibaba-details-qwengyre-accelerate-extreme-horizon-agent-training/"
+    },
     {
       "title": "Thread AI partners with US Army on Fire Control Systems",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/thread-ai-partners-with-us-army-on-fire-control-systems/"
+    },
+    {
+      "title": "AISI outlines priorities to tackle frontier AI evaluation gaps",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/aisi-outlines-priorities-to-tackle-frontier-ai-evaluation-gaps/"
+    },
+    {
+      "title": "Kyvvu: Why every AI agent needs to \u2018ASK\u2019 before it can act",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/kyvvu-why-every-ai-agent-needs-to-ask-before-it-can-act/"
     },
     {
       "title": "Marinela Profi, SAS: On governing autonomous AI agents",
@@ -21,46 +61,6 @@
       "title": "Abu Dhabi launches AI training programme for 20,000 government employees",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/abu-dhabi-ai-training-government-employees/"
-    },
-    {
-      "title": "Council of Europe and Microsoft sign AI cooperation agreement",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/council-of-europe-microsoft-ai-cooperation-agreement/"
-    },
-    {
-      "title": "Mistral AI launches Large 4 preview ahead of open-weight release",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mistral-ai-launches-large-4-preview-ahead-open-weight-release/"
-    },
-    {
-      "title": "Microsoft recommends data controls for government AI adoption",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/microsoft-recommends-data-controls-for-government-ai-adoption/"
-    },
-    {
-      "title": "CyberDSA 2026 opens with Malaysia\u2019s call for secure AI adoption",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/cyberdsa-2026-opens-malaysia-call-for-secure-ai-adoption/"
-    },
-    {
-      "title": "Deutsche Telekom targets \u20ac2.5 billion in savings from AI",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/deutsche-telekom-ai-savings/"
-    },
-    {
-      "title": "17 countries set out AI priorities for government science research",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/17-countries-ai-priorities-for-government-science-research/"
-    },
-    {
-      "title": "Malaysia\u2019s MACC expands AI use for intelligence-led investigations",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/macc-ai-intelligence-led-investigations/"
-    },
-    {
-      "title": "MIT Transit Lab secures $2.1M from Google for AI transit platform",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/mit-transit-lab-secures-2-1m-google-for-ai-transit-platform/"
     },
     {
       "title": "Hershey applies AI across its supply chain operations",
@@ -93,14 +93,14 @@
       "url": "https://www.artificialintelligence-news.com/news/malaysia-launches-ryt-bank-its-first-ai-powered-bank/"
     },
     {
-      "title": "Google\u2019s Veo 3 AI video creation tools are now widely available",
-      "date": "",
-      "url": "https://www.artificialintelligence-news.com/news/google-veo-3-ai-video-creation-tools-now-widely-available/"
-    },
-    {
       "title": "Microsoft\u2019s Majorana 2 quantum chip is also a case study for agentic AI in R&D",
       "date": "",
       "url": "https://www.artificialintelligence-news.com/news/microsoft-discovery-agentic-ai-majorana-2/"
+    },
+    {
+      "title": "US and Japan announce sweeping AI and tech collaboration",
+      "date": "",
+      "url": "https://www.artificialintelligence-news.com/news/us-and-japan-sweeping-ai-tech-collaboration/"
     }
   ]
 }
